@@ -1,3 +1,5 @@
+# 目录
+
 [toc]
 
 ## 第一章 基础知识架构
@@ -40,6 +42,7 @@
 ### 一、选择器的认识 
 
 #### 1.css选择器汇总
+
 选择器 | 用法 | 描述 | css版本
 :---:|:---:|:---:|:---:
 \#id|	#idname |	选择 id="idname" 的所有元素。|	1
@@ -96,7 +99,9 @@ element1~element2|	p~ul	|选中p 元素前面的 ul元素（兄弟）。|	3
 :invalid	|:invalid	|用于匹配输入值为非法的元素|	3
 
 #### 2.选择器兼容性汇总
+
 ##### css2.1:
+
 浏览器  | IE6 | IE7 | IE8 + |FF 2 +|Safari 3.0|Safari 3.2+|Chrome 2+|Opera
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 *|	YES|	YES|	YES|	YES|	YES|	YES|	YES|	YES
@@ -110,7 +115,9 @@ E[attr="name"]|	NO	|YES	|YES	|YES	|YES	|YES	|YES|	YES
 E[attr~="name"]|	NO|	YES|	YES|	YES|	YES|	YES|	YES|	YES
 E:before|	NO|	NO|	YES|	YES|	YES|	YES|	YES|	YES
 E:after	|NO	|NO	|YES|	YES|	YES|	YES|	YES|	YES
+
 ##### css3:
+
 浏览器  | IE6 | IE7 | IE8 + |IE9 +|	FF 3	|FF 3.5 +|	Safari 3.0|	Safari 3.2+	|Chrome 2	|Opera
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 E ~ F	|NO|	YES	|YES	|YES	|YES	|YES	|YES	|YES	|YES|	YES
@@ -135,23 +142,33 @@ E:selection|	NO|	NO|	NO|	YES	|YES只支持-MOZ-|	YES只支持-MOZ-	|YES|	YES	|YE
 E:enabled	|NO	|NO	|NO	|YES|	YES|	YES|	YES|	YES|YES|	YES
 E:disabled	|NO	|NO	|NO|	YES|	YES|	YES	|YES|	YES|	YES|	YES
 E:not(s)	|NO|	NO|	NO|	YES|	YES|	YES|	YES|	YES|	YES|	YES
+
 #### 3.伪类选择器的注意点
+
 书写顺序：
 a:link-> 
 a:visited-> 
 a:hover->
 a:focus->
 a:active
+
 ### 二、层叠性和特殊性
 
 > 即便是在不太复杂的样式表中，一个元素也可能会有不止一套规则。这时候便有了层叠性这个概念。
+
 #### 1.层叠性的重要度排序：
+
 >用户自定义重要声明->
 编程人员重要声明->
 编程人员正常声明->
 用户自定义正常声明->
 浏览器代理声明
+
 #### 2.权重：
+
+
+----------
+
 
 选择器种类 | 对应权重
 :---:|:---:
@@ -162,9 +179,14 @@ id选择器 | 100
 行内样式 | 1000
 ！important|1000+
 
----
+
+----------
+
+
 >tips:绝大多数情况避免使用!important，在日后的多人开发中很容易覆盖别人写的样式。
+
 #### 3.属性的继承：
+
 1.不可继承的：  
 
 ```
@@ -176,6 +198,7 @@ display、margin、border、padding、background、height、min-height、max-hei
 ```
 visibility和cursor。
 ```
+
 3.内联元素可继承的有：
 
 ```
@@ -199,7 +222,9 @@ list-style、list-style-type、list-style-position、list-style-image。
 ```
 border-collapse。
 ```
+
 #### 4.规划维护样式表：
+
 1. 设计代码的结构
 
 >为了便于维护样式表，最好将代码按照一定的逻辑分成几大块，你也可以像下面这样去构建你的代码结构。
@@ -229,19 +254,23 @@ border-collapse。
 ```
 <!--@page-top、@page-help、@page-section-->
 ```
+
 ## 第三章 可视化模型
 
 >本章的阅读会让你对网页常用的布局手段有更深的了解，同时你也会知道一些需要注意的点。
 
 ### 一、盒模型
+
 #### 1. 先来看看盒模型
 
 ![image](http://upload.ouliu.net/i/20171124134537bpugs.gif)
 
 >众所周知，盒模型分为两种，标准盒模型和ie盒模型，我们来看看两者的区别。
+
 1. 标准盒模型：
 
 ![image](http://upload.ouliu.net/i/20171124134248pxu59.jpeg)
+
 2. ie盒模型：
 
 ![image](http://upload.ouliu.net/i/20171124134336gxl5m.jpeg)
@@ -250,6 +279,7 @@ border-collapse。
 - 平常我们对div写的width时，width=content。
 - 当对div设置box-sizing时，width=content+2padding+2border。
     - height方面和width是相似的，请自行分析。
+
 #### 2.外边距叠加问题
 1. 外边距叠加
     1. 同级元素外边距叠加情况
