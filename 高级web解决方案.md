@@ -2,6 +2,7 @@
 
 [toc]
 
+
 ## 第一章 基础知识架构
 
 >早期网页组成只有html，而布局方面大多采用table去布局。然而对于现在的我们众所周知的是table并不适合布局。于是在当时 的这种布局下，网页的源代码混乱不堪。十分难以维护，跟别提什么可阅读性了。很容易就会错删或者疏漏什么，让整个布局随时面临随时崩溃的危险。在现在提倡的标签语义化在当时来说也是毫无存在的踪影。好在后来css出现了。有了它网页再次具有了表现性，div+css的布局方式油然而生。文档有了意义，浏览器默认样式可以被覆盖。自此，网页的结构层（html）和表现层分开了，程序的可阅读性，可维护性得到了大大的提升。
@@ -42,7 +43,6 @@
 ### 一、选择器的认识 
 
 #### 1.css选择器汇总
-
 选择器 | 用法 | 描述 | css版本
 :---:|:---:|:---:|:---:
 \#id|	#idname |	选择 id="idname" 的所有元素。|	1
@@ -99,9 +99,7 @@ element1~element2|	p~ul	|选中p 元素前面的 ul元素（兄弟）。|	3
 :invalid	|:invalid	|用于匹配输入值为非法的元素|	3
 
 #### 2.选择器兼容性汇总
-
 ##### css2.1:
-
 浏览器  | IE6 | IE7 | IE8 + |FF 2 +|Safari 3.0|Safari 3.2+|Chrome 2+|Opera
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 *|	YES|	YES|	YES|	YES|	YES|	YES|	YES|	YES
@@ -115,9 +113,7 @@ E[attr="name"]|	NO	|YES	|YES	|YES	|YES	|YES	|YES|	YES
 E[attr~="name"]|	NO|	YES|	YES|	YES|	YES|	YES|	YES|	YES
 E:before|	NO|	NO|	YES|	YES|	YES|	YES|	YES|	YES
 E:after	|NO	|NO	|YES|	YES|	YES|	YES|	YES|	YES
-
 ##### css3:
-
 浏览器  | IE6 | IE7 | IE8 + |IE9 +|	FF 3	|FF 3.5 +|	Safari 3.0|	Safari 3.2+	|Chrome 2	|Opera
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 E ~ F	|NO|	YES	|YES	|YES	|YES	|YES	|YES	|YES	|YES|	YES
@@ -142,28 +138,22 @@ E:selection|	NO|	NO|	NO|	YES	|YES只支持-MOZ-|	YES只支持-MOZ-	|YES|	YES	|YE
 E:enabled	|NO	|NO	|NO	|YES|	YES|	YES|	YES|	YES|YES|	YES
 E:disabled	|NO	|NO	|NO|	YES|	YES|	YES	|YES|	YES|	YES|	YES
 E:not(s)	|NO|	NO|	NO|	YES|	YES|	YES|	YES|	YES|	YES|	YES
-
 #### 3.伪类选择器的注意点
-
 书写顺序：
 a:link-> 
 a:visited-> 
 a:hover->
 a:focus->
 a:active
-
 ### 二、层叠性和特殊性
 
 > 即便是在不太复杂的样式表中，一个元素也可能会有不止一套规则。这时候便有了层叠性这个概念。
-
 #### 1.层叠性的重要度排序：
-
 >用户自定义重要声明->
 编程人员重要声明->
 编程人员正常声明->
 用户自定义正常声明->
 浏览器代理声明
-
 #### 2.权重：
 
 
@@ -184,9 +174,7 @@ id选择器 | 100
 
 
 >tips:绝大多数情况避免使用!important，在日后的多人开发中很容易覆盖别人写的样式。
-
 #### 3.属性的继承：
-
 1.不可继承的：  
 
 ```
@@ -198,7 +186,6 @@ display、margin、border、padding、background、height、min-height、max-hei
 ```
 visibility和cursor。
 ```
-
 3.内联元素可继承的有：
 
 ```
@@ -222,9 +209,7 @@ list-style、list-style-type、list-style-position、list-style-image。
 ```
 border-collapse。
 ```
-
 #### 4.规划维护样式表：
-
 1. 设计代码的结构
 
 >为了便于维护样式表，最好将代码按照一定的逻辑分成几大块，你也可以像下面这样去构建你的代码结构。
@@ -254,32 +239,27 @@ border-collapse。
 ```
 <!--@page-top、@page-help、@page-section-->
 ```
-
 ## 第三章 可视化模型
 
 >本章的阅读会让你对网页常用的布局手段有更深的了解，同时你也会知道一些需要注意的点。
 
 ### 一、盒模型
-
 #### 1. 先来看看盒模型
 
 ![image](http://upload.ouliu.net/i/20171124134537bpugs.gif)
 
 >众所周知，盒模型分为两种，标准盒模型和ie盒模型，我们来看看两者的区别。
-
 1. 标准盒模型：
 
 ![image](http://upload.ouliu.net/i/20171124134248pxu59.jpeg)
-
 2. ie盒模型：
 
 ![image](http://upload.ouliu.net/i/20171124134336gxl5m.jpeg)
 
 >总结
 - 平常我们对div写的width时，width=content。
-- 当对div设置box-sizing时，width=content+2padding+2border。
+- 当对div设置box-sizing=border-box时，width=content+2padding+2border。
     - height方面和width是相似的，请自行分析。
-
 #### 2.外边距叠加问题
 1. 外边距叠加
     1. 同级元素外边距叠加情况
@@ -330,7 +310,10 @@ border-collapse。
     
 >先来了解一个概念——“文档流模型”
 
-1. 默认情况下：你所构造的所有元素都是在二维平面上的，它们在一个面上，没有高低之分，属于一个维度。而当你使用了浮动流布局，定位流布局后，情况就会不一样了。这个时候会多一个维度，高度。也就是说它们会有高低之分，可以高的覆盖低的。从屏幕上看就是在原先的x、y轴上，多了一个z轴。z轴是指向程序员的。假设默认文档流在z轴的0点处，那么浮动的元素就会在1这个位置，定位的元素就会在2。而它们的子元素会和它们高度平级，也就是被父元素拖起来。而因为实际的网络布局中情况远比现在所设想的复杂，所以会有一个z-index属性来控制相同的定位机制产生的高度一样的问题。
+1. 默认情况下：你所构造的所有元素都是在二维平面上的，它们在一个面上，没有高低之分，属于一个维度。而当你使用了浮动流布局，定位流布局后，情况就会不一样了。这个时候会多一个维度，高度。也就是说它们会有高低之分，可以高的覆盖低的。从屏幕上看就是在原先的x、y轴上，多了一个z轴。z轴是指向程序员的。假设默认文档流在z轴的0点处，那么浮动的元素就会在1这个位置，定位的元素就会在2（这只是为了说明定位元素一般情况下高于浮动元素而假设的两个相对数值）。而它们的子元素会和它们高度平级，也就是被父元素拖起来，实际高度以父元素为基准。而因为实际的网络布局中情况远比现在所设想的复杂，所以会有一个z-index属性来控制相同的定位机制产生的高度一样的问题。
+
+>当然上面的说法只适合初步理解，具体的可以看第八章。
+
 2. z-index区间是[-2147483xxx,2147483xxx]。xxx是因为不同浏览器的具体数值是不一样的。
 3. 结合一张图片理解下文档流模型。
 
@@ -353,6 +336,7 @@ border-collapse。
 3. 效果：因为相对于浏览器窗口定位，所以浏览时位置相对不会改变。
 
 >就像我所知道的，大量的定位流布局对性能会有影响，所以还有一种布局可以满足日常需要。
+
 #### 2.浮动流
 1. 条件：设置元素浮动。
 2. 效果：脱离默认文档流，可以横向排版。
@@ -374,6 +358,7 @@ border-collapse。
 父级div 也一起浮动  | 产生新的浮动 | 2星
 父级div定义 display:table| 会产生各种问题，用这种古老的东西|0星
 结尾处加 br标签 clear:both | 类似第二种，br现在已经很少用了|0星
+
 ## 第四章 链接应用样式
 
 >多变的链接操作
@@ -638,14 +623,69 @@ tips：我觉得这已经很够了，相信不是小白的看一下思想都能�
 
 
 
+## 第八章 详细探究文档流模型
+
+>算是比较深入的理解页面的三维排序
+
+### 一、7阶层叠水平
+
+1. 假设有两个div，一个设置inline-block，另一个设置float：left。那么谁会在上面呢？浮动会脱离默认文档流，它应该在上面吧！？
+
+>公布答案：来看下图。。。(做的有点糙)
+
+![image](http://upload.ouliu.net/i/20171127102401l8vb1.jpeg)
+
+>没错，inline-block的在上面。why？
+
+2. 7阶层叠水平模型
+    1. 解答：其实这些都是已经规定好的，它们遵守7阶层叠水平模型，按照这个去看，问题就解决了。
+    2. 认识：还是看我的图来认识一下吧。。。
+
+![image](http://upload.ouliu.net/i/20171127104615frnru.jpeg)
+
+3. 看了我这个图，估计就知道inline-block为什么在float元素之上了。
+
+>但是，层叠上下文又是什么呢？接着看。
+
+### 二、z-index和层叠上下文
+
+1. 认识z-index
+    1. 定义：用来决定同一个层叠上下文中元素的高低；
+    2. 条件：需要是定位元素；（除去static）
+
+2. 认识层叠上下文
+    1. 定义：层叠上下文是HTML元素的三维概念，这些HTML元素在一条假想的相对于面向（电脑屏幕的）视窗或者网页的用户的z轴上延伸，HTML元素依据其自身属性按照优先级顺序占用层叠上下文的空间。
+    2. 如何触发产生层叠上下文？满足下列条件之一即可。
+        1. 根元素 (HTML)
+        2. z-index 值不为 "auto"的 绝对/相对定位
+        3. 一个 z-index 值不为 "auto"的 flex 项目 (flex item)，即：父元素 display: flex|inline-flex
+        4. opacity 属性值小于 1 的元素
+        5. transform 属性值不为 "none"的元素
+        6. mix-blend-mode 属性值不为 "normal"的元素
+        7. filter值不为“none”的元素
+        8. perspective值不为“none”的元素
+        9.isolation 属性被设置为 "isolate"的元素 
+        10. position: fixed
+        11. 在 will-change 中指定了任意 CSS 属性，即便你没有直接指定这些属性的值
+        12. -webkit-overflow-scrolling 属性被设置 "touch"的元素
+
+>本部分层叠上下文知识摘自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context)。
+
+### 三、生成了层叠上下文的z-index比较
+
+1. 首先比较z-index需要在同一个层叠上下文中
+2. 父级z-index大的基数就大。也就是假设div1 z-index：2，div2 z-index：1， div1子元素z-index无论为多少都会在div2之上。而div1的子元素它们的z-index比较是以div1的层叠上下文为基础的。可以看我下面的演示。
+
+![image](http://upload.ouliu.net/i/20171127111815spxnn.jpeg)
+
+![image](http://upload.ouliu.net/i/20171127111853598vc.jpeg)
 
 
+> 这里我尝试到了-40，仍然是在div2之上。
 
+3. 再来看看本章第一个假设案例。
 
-
-
-
-
+>当我们触发它们两个生成层叠上下文后，它们的上下关系是由html中先后决定的。后写的在上面。这个层叠顺序对两个浮动元素和两个定位元素（absolute、relative）是也适用的。只不过对于两个浮动元素应该说成后浮动的在上面。（因为浮动分左右浮动）
 
 
 
