@@ -428,4 +428,3 @@ f();// 报错，this未定义
 - public
 - static
 - yield
-
