@@ -1078,5 +1078,45 @@ foreach:function(f,c){this.set.foreach(f,c);}
     
 3. 如何实现模块化？
     - 初步：用对象做命名空间
-    - 进一步：用函数作民命空间（一般常用匿名函数自执行）
+    - 进一步：用函数作命名空间（一般常用匿名函数自执行）
     - 或者：借助第三方库（比如requireJS）
+
+```
+/**
+         * 模块函数中的Set类
+         **/
+        //声明全局变量Set,使用一个函数的返回值给它赋值
+        //函数结束时紧跟的一堆圆括号说明这个函数定义后立即执行
+        //它的返回值将赋值给Set,而不是将这个函数赋值给Set
+        //注意它是一个函数表达式，不是一条语句，因此函数"invocation"并没有创建全局变量
+        var Set = (function invocation(){
+            function Set(){//这个构造函数是局部变量
+                this.values = {};//这个对象的属性用来保存这个集合
+                this.n = 0; //集合中值的个数
+                this.add.apply(this,arguments);//将所有的参数都添加至集合中
+            }
+            //给Set.prorotype定义实例方法
+            //这里省略了详细代码
+            Set.prototype.contains = function(value){
+                //注意我们调用了v2s()而不是调用带有笨重前缀的set._v2s()
+                return this.values.hasOwnProperty(v2s(value));
+            };
+            Set.prototype.size = function(){return this.n};
+            Set.prototype.add =function(){/*...*/};
+            Set.prototype.remove =function(){/*...*/};
+            Set.prototype.foreach =function(f,context){/*...*/};
+            
+            //这里是上面方法调用到的一些辅助的函数和变量
+            //它们不属于模块的共有API,但它们都隐藏在函数的作用域内
+            //因此我们不必将它们定义为Set的属性或使用下划线做其前缀
+            
+            function v2s(val){/*...*/}
+            function objectId(o){/*...*/}
+            var nextId = 1;
+            //这个模块的共有API是Set()构造函数
+            //我们需要把这个函数从私有命名空间中导出来
+            //以便在外部可以使用它，在这种全局下，我们通过返回这个构造函数来导出它
+            //它变成第一行代码所芝的表达式的值
+            return Set;
+        }());
+```
