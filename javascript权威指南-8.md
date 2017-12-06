@@ -213,7 +213,7 @@ function Set(argument) {
     this.add.apply(this, arguments);
 }
 
-Set.prototype. = function(argument) {
+Set.prototype.add = function(argument) {
     for (var i = 0; i < arguments.length; i++) {
         var val = arguments[i];
         var str = Set._v2s(val);
