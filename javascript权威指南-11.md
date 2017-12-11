@@ -8,7 +8,7 @@
          </head>
          <body>
                    <h1>AnHTML Document</h1>
-                   <p>Thisis a <i>simple</i> document.
+                   <p>Thisis a <i>simple</i> document.</p>
          </body>
 </html>
 ```
