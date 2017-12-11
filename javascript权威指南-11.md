@@ -292,12 +292,12 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
 15.9.6 文本域
 
 ##### 8-5. 选择框和选项元素
-Select元素size属性值大于1时，它将显示为列表中的选项。Select元素能以两种不同的方式运行，这取决于它的type属性值是如何设置的。如果<select>元素有multiple属性，也就是Select对象的type属性值为“ select-multiple”,那么允许用户选取多个选项。否则，只能选取单个选项，它的type属性值为”select-one”.
-
+         Select元素size属性值大于1时，它将显示为列表中的选项。Select元素能以两种不同的方式运行，这取决于它的type属性值是如何设置的。如果<select>元素有multiple属性，也就是Select对象的type属性值为“ select-multiple”,那么允许用户选取多个选项。否则，只能选取单个选项，它的type属性值为”select-one”。
 #### 9. 其他文档特性
-
 ##### 9-1. Document的属性
+
 >Document的属性有body、documentElement和forms等这些特殊的文档元素。
+
 - cookie：允许JavaScript程序读、写HTTPcookie的特殊的属性。
 - domain：该属性允许当Web页面之间交互时，相同域名下互相信任的Web服务器之间写作放宽同源策略安全限制。
 - lastModified：包含文档修改时间的字符串。
@@ -325,6 +325,7 @@ Select元素size属性值大于1时，它将显示为列表中的选项。Select
 ##### 9-3. 查询选取的文本
 
 >标准的window .getSelection()方法返回一个Selection对象，后者描述了当前选取的一系列一个或多个Range对象。
+
 ##### 9-4. 可编辑的内容
 
 >有两种方法来启用编辑功能。
