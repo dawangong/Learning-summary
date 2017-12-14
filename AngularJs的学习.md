@@ -26,6 +26,7 @@
 
 ![image](http://upload.ouliu.net/i/20171214102535dal2d.jpeg)
 
+>官方版如下：
 
 ```
 .                     app
@@ -76,6 +77,32 @@ controllers   directives   services   routes   filters
 >创建controller和directive的时候，会自动创建自己的私有scope对象，私有scope从rootScope继承.  
 
 >在默认的情况下，directive不会创建他们自己的scope.他们会用他们父对象的scope作为自己的scope.  但是 angularjs 允许改变这种默认行为。
+
+>注释做自定义指令的注意点
+
+1. 自定义中小驼峰命名的要在注释中改为用'-'连接的方式。
+2. 通过注释执行命令时要注意前面带有derective：字样，效果如下：
+
+>还有一点，经过实验不能用大驼峰命名指令
+
+```
+<div ng-app="apps">
+     <!--directive:my-de -->
+</div>
+```
+
+
+```
+let apps=angular.module('apps',[]);
+    apps.directive('myDe',() => {
+        return{
+            restrict:'M',
+            replace:true,
+            template:'<h1>dgfrhfgdh</h1>'
+        }
+    })
+```
+
   
 #### 8. derective下的scope对象
 1. false：会使用父对象的scope对象
