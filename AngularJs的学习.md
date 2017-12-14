@@ -20,18 +20,9 @@
 - 如果有多个控制器，而每个控制器负责不同的功能但是却有部分相同的代码逻辑需求怎么办？
     - 通过angular中的服务解决。
     - 可以把服务当做一个单独模块，然后给需要的控制器们注入依赖，就可以在它们里面使用注册过的服务了。
-- 官方推荐的模块切分：如下目录结构
+- 官方推荐的模块切分：如下目录结构（个人理解）
 
-
-```
-index.html
-index.css
-app.js
-controllers.js
-services.js
-directives.js
-...
-```
+![image](http://upload.ouliu.net/i/20171214093735b4h9y.jpeg)
 
 #### 4. angular中的bind和表达式
 
