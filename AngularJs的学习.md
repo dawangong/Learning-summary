@@ -24,6 +24,16 @@
 
 ![image](http://upload.ouliu.net/i/20171214093735b4h9y.jpeg)
 
+
+```
+.                     app
+                       |
+    -----------------------------------------------
+    |             |            |         |        |
+controllers   directives   services   routes   filters
+```
+
+
 #### 4. angular中的bind和表达式
 
 1. 功能：都是将视图和数据进行双向的绑定。
