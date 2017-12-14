@@ -7,7 +7,9 @@
 - 每个作用域实例（$scope）都有$on方法，用来注册作用域事件的处理器。
 
 #### 2. 路由
-
+- 原理：
+    - 哈希#
+    - HTML5中新的history API
 - 作用：
     - 防止浏览器向后台发起请求
     - 为angular提供识别标识
@@ -43,4 +45,67 @@ controllers   directives   services   routes   filters
     - 在主页面用ng-bind其他的模板页面（片段html）用表达式。
     
 
+#### 5. 指令
+
+- 指令执行的三个阶段 & compile和link：
+    - 加载阶段：加载angular.js，找到ng-app指令，确定应用的边界
+    - 编译阶段：
+        - 遍历DOM，找到所有指令；
+        - 根据指令代码中的template、replace、transclue转换DOM结构
+        - 如果存在compile函数则调用
+    - 链接阶段：
+        - 对每一条指令运行link函数
+        - link函数一般用来操作DOM，绑定事件监听器
+    - 关于compile和link：、
+        - compile函数用来对模板自身进行转换，而link函数负责在模型和视图之间进行动态关联；
+        - 作用域在链接阶段才会被绑定到编译之后的link函数上
+        - compile函数仅仅在编译阶段运行一次，而对于指令的每个实例，link函数都会执行一次
+        - compile可以返回preLink和postLink函数，而link函数只会返回postLink函数
+        - 如果需要修改DOM结构，应该在postLink中来做这件事情，而如果在preLink中做这件事情会导致错误
+        - 大多数时候我们只要编写link函数即可
+
+
+- link相关
+    - 解释：当directive被angular 编译后，执行该方法。
+    - link后跟随的方法中的参数解释：
+        - scope:angular中的scope对象
+        - element:当前触发函数的元素
+        - attrs:attrs是个map，内容是你这个directive上的所有属性
+    - 当directive中只有一个link函数可以直接返回匿名function
+
+>创建controller和directive的时候，会自动创建自己的私有scope对象，私有scope从rootScope继承.  
+
+>在默认的情况下，directive不会创建他们自己的scope.他们会用他们父对象的scope作为自己的scope.  但是 angularjs 允许改变这种默认行为。
+  
+#### 8. derective下的scope对象
+1. false：会使用父对象的scope对象
+2. true：会创造一个新scope对象继承父对象的scope对象（像js里父类子类继承），也就是拥有了和父级一样却不会相互影响的scope对象。
+3. {}：创造一个全新隔离的scope空对象
+4. 有三种方法把值从parent 对象中传递到 directive 中。
+    1. 通过 @ 传值  （字符串绑定，one way binding(单向绑定）,就是传递字符串到directive 进行显示)，在调用directive 的时候，需要对 attribute 使用 {{}} 进行传值。
+    2. 通过  = 传值   (模型 绑定， two way bingding（双向绑定）） 在调用directive 的时候，需要对 attribute 使用  模型名称  进行传值。
+    3. 通过 &　传值 （方法绑定）
+    
+#### 7. ng-include和ng-view
+
+1. 功能：都可以插入html片段
+2. 区别：
+    1. ng-include用于重用重复的html片段，比如header区。
+    2. ng-view则和路由搭配，方便视图控制。
+    3. ng-include用法示例：
+    
+
+```
+<div ng-include="'header.html'">
+```
+
+#### 8. survice的特性
+1. Service都是单例的
+2. Service由$injector负责实例化
+3. Service在整个应用的生命周期中存在，可以用来共享数据
+4. 在需要使用的地方利用依赖注入机制注入Service
+5. 自定义的Service需要写在内置的Service后面
+6. 内置Service的命名以$符号开头，自定义Service应该避免
+
+>Service，Factory，Provider本质上都是Provider
 
