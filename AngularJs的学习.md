@@ -7,6 +7,7 @@
 - 每个作用域实例（$scope）都有$on方法，用来注册作用域事件的处理器。
 
 #### 2. 路由
+
 - 原理：
     - 哈希#
     - HTML5中新的history API
@@ -14,6 +15,8 @@
     - 防止浏览器向后台发起请求
     - 为angular提供识别标识
     - angular会获取到当前url并且将#后面的字段截取到与when()中参数进行比较。
+    
+>感觉路由很像ajax刷新局部页面，经过试验在network里果然发现了xhr请求
 
 #### 3. angular模块
 
@@ -105,13 +108,16 @@ let apps=angular.module('apps',[]);
 
   
 #### 8. derective下的scope对象
-1. false：会使用父对象的scope对象
+
+1. false：会使用父对象的scope对象（默认）
 2. true：会创造一个新scope对象继承父对象的scope对象（像js里父类子类继承），也就是拥有了和父级一样却不会相互影响的scope对象。
-3. {}：创造一个全新隔离的scope空对象
+3. {}：创造一个全新隔离的scope空对象，指令间互不影响。（如果只想用父级scope中某些属性方法，可以用下面的传值）
 4. 有三种方法把值从parent 对象中传递到 directive 中。
     1. 通过 @ 传值  （字符串绑定，one way binding(单向绑定）,就是传递字符串到directive 进行显示)，在调用directive 的时候，需要对 attribute 使用 {{}} 进行传值。
     2. 通过  = 传值   (模型 绑定， two way bingding（双向绑定）） 在调用directive 的时候，需要对 attribute 使用  模型名称  进行传值。
     3. 通过 &　传值 （方法绑定）
+    
+>实际上给我感觉都是用属性去接收。
     
 #### 7. ng-include和ng-view
 
@@ -127,6 +133,7 @@ let apps=angular.module('apps',[]);
 ```
 
 #### 8. survice的特性
+
 1. Service都是单例的
 2. Service由$injector负责实例化
 3. Service在整个应用的生命周期中存在，可以用来共享数据
@@ -135,4 +142,22 @@ let apps=angular.module('apps',[]);
 6. 内置Service的命名以$符号开头，自定义Service应该避免
 
 >Service，Factory，Provider本质上都是Provider
+
+#### 9.templateUrl和template:$templateCache
+
+- 两者都可以复用同一套模板，那么实际应用中有什么区别呢？
+    - angular的模板获取：AngularJS的模板tpl通过XHR下载
+    - 在实际中，如果使用templateUrl会默认需要时从规定的路径去取。实际上一个模板如果被重复需要，就会重复请求获取。而使用template:$templateCache可以允许$http 服务缓存经过XHR的模板请求，这样它们就只会被请求一次。当一个模板被取到了，它的内容就会存储在 $templateCache 中。
+    
+    
+#### 10.directive中template下的replace和transclude的用法
+
+1. replace：是否替换自定义指令元素中所写的内容（true/false）
+2. transclude：按要求合并，看示例：
+
+
+```
+template: "<div>Hello everyone!<div ng-transclude></div></div>
+//自定义指令元素内部写的内容替换到ng-transclude里面去
+```
 
