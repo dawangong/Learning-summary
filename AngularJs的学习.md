@@ -161,3 +161,28 @@ template: "<div>Hello everyone!<div ng-transclude></div></div>
 //自定义指令元素内部写的内容替换到ng-transclude里面去
 ```
 
+#### 11. ui.router
+
+1. 方法
+- go()  
+- reload()
+- get()
+
+2. 属性
+- current
+- params
+
+3. 事件
+- $stateChangeError
+- $stateChangeStart
+- $stateChangeSuccess
+- $stateNotFound
+
+>在$rootScope.$on()中监听事件变化
+
+
+```
+$rootScope.$on('xxx事件',function(){
+     your code ...
+})
+```
