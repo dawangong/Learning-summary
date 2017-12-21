@@ -74,13 +74,13 @@ noupdate | obsolete | progress | updateready
 window.onload=funciton(){
     //code
 }
-```javascript
+```
 
 ##### 2-2. 设置HTML标签属性为事件处理程序
 
 ```javascript
 <button onclick="alert('hello');"></button>
-```javascript
+```
 
 cols1 | cols 2 | cols 3 | cols 4
 ---|--- |--- |---
@@ -102,7 +102,7 @@ funciton(event){
         }
     }
 }
-```javascript
+```
 
 ##### 2-3. addEventListener()
 
@@ -113,7 +113,7 @@ funciton(event){
 
 ```javascript
 document.getElementById("id").addEventListener("click", handMouseMove,false);
-```javascript
+```
 
 
 ##### 2-4. removeEventListener()
@@ -123,7 +123,7 @@ document.getElementById("id").addEventListener("click", handMouseMove,false);
 
 ```javascript
 document.getElementById("id").removeEventListener("click", handMouseMove,false);
-```javascript
+```
 
 ##### 2-5. attachEvent()
 
@@ -146,7 +146,7 @@ else{
     b.attachEvent("onclick",handler);
     b.detachEvent("onclick",handler);
     }
-```javascript
+```
 
 #### 3. 事件处理程序的调用
 
@@ -161,7 +161,7 @@ else{
 function(event){
     event = event || window.event;
 }
-```javascript
+```
 
 ##### 3-2. 事件处理程序的运行环境
 
@@ -177,7 +177,7 @@ function addEvent(target, type, handler){
             handler.call(target,event);
         });
 }
-```javascript
+```
 
 ##### 3-3. 事件处理程序的返回值
 
@@ -210,7 +210,7 @@ function cancelHandler(event){
         event.returnValue = false;
     return false;
 }
-```javascript
+```
 
 #### 4. 文档加载事件
 
@@ -273,7 +273,7 @@ var whenReady = (function(){
         else funcs.push(f);  
     }  
 }());  
-```javascript
+```
 #### 5. 鼠标事件
 
 
