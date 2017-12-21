@@ -37,13 +37,13 @@ obj.x=3;
 var lcg={
     y:'yes'
 }
-```javascript
+```
 
 ```javascript
 new运算符
 var obj=new Object();
 obj.z=33;
-```javascript
+```
 
 #### 5. 原型
 
@@ -87,7 +87,7 @@ Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
-```javascript
+```
 
 
 #### 7. 继承
@@ -113,7 +113,7 @@ delete this.x           //无法删除全局变量
 
 function a(){}
 delete this.a;          //同样无法删除全局函数
-```javascript
+```
 
 #### 9. 检测属性
 1. 常见的方法：
@@ -129,19 +129,19 @@ delete this.a;          //同样无法删除全局函数
 ```javascript
 var o={a:12}
 "a" in o ; //true 
-```javascript
+```
 
 
 ```javascript
 var o={a:12}
 o.hasOwnproperty('x'); //true
-```javascript
+```
 
 
 ```javascript
 var o={a:12}
 o.propertyIsEnumerable('x'); //true
-```javascript
+```
 
     
 3. 另一种更简单的方法
@@ -150,14 +150,14 @@ o.propertyIsEnumerable('x'); //true
 ```javascript
 var o={a:12}
 o.x !== undefined  //true
-```javascript
+```
 >但是上述方法有一个缺憾，比如
 
 
 ```javascript
 var o={a:undefined}
 o.x !== undefined  //false
-```javascript
+```
 
 >但是显然上面的对象是存在这个属性的
 
@@ -193,7 +193,7 @@ var random={
         return Math.floor(Math.random()*65536)-32768;
     }
 }
-```javascript
+```
 
 #### 11.对象的三个属性
 
@@ -204,7 +204,7 @@ var random={
 
 ```javascript
 a.isPrototypeOf(b);
-```javascript
+```
 2. 类属性
     1. 定义：用来表示对象类型信息的一个字符串
     2. 获取：调用toString()，然后返回第八个到倒数第二个位置之间的字符
@@ -226,7 +226,7 @@ a.isPrototypeOf(b);
 var o={x:1,y:{z:2}};            //测试对象
 var s=JSON.stringify(o);
 var p=JSON.parse(s);
-```javascript
+```
 
 #### 13.对象方法
 
