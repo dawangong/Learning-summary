@@ -17,7 +17,7 @@ CSS是个复杂的标准。CSS本身就可以写一本书。为了理解CSS校�
 ```javascript
  <p style="margin:20px;border:2px red solid;">
             samll letter
-</p>
+ </p>
 ```
 
 尽管如此，通常将单独的HTML元素和CSS样式表分开，并把他们定义在一个样式表（stylesheet）中会更有用，样式表通过选择器将一组样式属性和使用选择器（selector）描述的一组HTML元素关联在一起。一个选择器基于ID，类名或标签或更多条件的指定（或“选择”）一个或多个文档中的元素。
