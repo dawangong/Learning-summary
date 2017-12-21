@@ -157,7 +157,7 @@ let apps=angular.module('apps',[]);
 
 
 ```javascript
-template: "<div>Hello everyone!<div ng-transclude></div></div>
+template: "<div>Hello everyone!<div ng-transclude></div></div>"
 //自定义指令元素内部写的内容替换到ng-transclude里面去
 ```
 
