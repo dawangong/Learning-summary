@@ -13,7 +13,7 @@ function a (x){
 var a=function (x){
     return x;
 }
-```javascript
+```
 
 
 #### 2. if 语句：
@@ -29,7 +29,7 @@ if(a>1)
 }
 
 // yes
-```javascript
+```
 >当然也可以搭配else使用
 
 
@@ -42,7 +42,7 @@ if(a>1)
 else{
     alert('no');  
 }
-```javascript
+```
 
 
 #### 3. else if 语句
@@ -66,7 +66,7 @@ else if(a<1){
 else{
     alert('其他');              //这里会alert“其他
 }
-```javascript
+```
 #### 4. switch 语句
 1. 定义：else if的变种，但是它更适合所有分支都依赖于同一个表达式的值。
 2. 用法：直接看例子
@@ -82,7 +82,7 @@ switch(a){
     case 4 :alert(4) ; break;
     default:alert('其他');
 }
-```javascript
+```
 >上面的switch语句会根据a的值去选择合适的分支。
 
 >一些注意点如下
@@ -102,7 +102,7 @@ while(a>3){
     alert('yse')
     a++;
 }
-```javascript
+```
 #### 6. do while语句
 1. 定义：和while语句十分相似，只不过它是先执行后判断条件。
 2. 示例：
@@ -115,7 +115,7 @@ do {
     i++;
 }
 while (i < 5);
-```javascript
+```
 #### 7. for 语句
     1. 最常用的循环语句，功能强大用法看下面示例。
     
@@ -125,7 +125,7 @@ for(var i=0 ;i<10;i++){
     console.log('yse');
 }
 
-```javascript
+```
 >上面控制台总共输出10个yes字符。
 
 >for循环“()”内第一个规定循环起始条件，第二个规定循环终止条件，第三个用来减少控制循环次数。
@@ -148,7 +148,7 @@ for (var prop in obj) {
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
-```javascript
+```
 
 #### 9. 跳转语句
 1. 概述：跳转语句顾名思义就是可以使执行位置从一处跳到另一处多搭配循环中。
@@ -170,7 +170,7 @@ loop:while(token!=null){
     continue loop;  //跳转下一次循环
     //这里是代码
 }
-```javascript
+```
 #### 11. return 语句
 1. 概述：返回函数调用的值，只能在函数体内使用，但并不是函数体内必须的东西。在函数体外会报错。
     
@@ -224,7 +224,7 @@ catch(err) {
 </html>
 
 结果：adddlert is not defined
-```javascript
+```
 >try catch+throw
 
 
@@ -262,7 +262,7 @@ function myFunction() {
 </script>
 
 结果：throw自定义的值
-```javascript
+```
 >try catch+throw
 
 
@@ -308,7 +308,7 @@ function myFunction() {
 
 结果：catch语句捕捉返回错误信息
       finally执行其他操作
-```javascript
+```
 #### 14. with 语句
 1. 定义：用于临时拓展作用域链；（放在作用于顶端）
 2. 注意：在严格模式中with语句是被禁止的，同时使用它的代码块会很难优化，运行的很慢。
@@ -328,7 +328,7 @@ with(document.form[0]){
     address.value='';
     email.value='';
 }
-```javascript
+```
 #### 15. debugger 语句
 1. 定义：debugger 语句用于停止执行 JavaScript，并调用 (如果可用) 调试函数。
 2. 用法： debugger 语句类似于在代码中设置断点。
@@ -341,7 +341,7 @@ var x = 15 * 5;
 debugger;
 document.getElementbyId("demo").innerHTML = x;
 
-```javascript
+```
 #### 16. "use strict"
 1. 定义：JavaScript 严格模式（strict mode）即在严格的条件下运行。
 2. 概述："use strict"指令在JavaScript1.8.5(ECMAScript5)中新增。
@@ -357,7 +357,7 @@ document.getElementbyId("demo").innerHTML = x;
 "use strict";
 x = 3.14;       // 报错 (x 未定义)
 </script>
-```javascript
+```
 
 >为什么使用严格模式？
 
@@ -393,7 +393,7 @@ x = 3.14;       // 报错 (x 未定义)
 "use strict";
 eval ("var x = 2");
 alert (x);               // 报错
-```javascript
+```
 
 
 
@@ -416,7 +416,7 @@ function f(){
 };
 f();// 报错，this未定义
 
-```javascript
+```
 >严格模式中的保留字
 
 - implements
