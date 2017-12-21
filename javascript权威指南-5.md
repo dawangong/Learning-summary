@@ -28,7 +28,7 @@ javscript语言是动态的，可以新增属性也可以删除属性。
 2. new运算符
 
 
-```
+```javascript
 字面量：
 
 var obj={};
@@ -37,13 +37,13 @@ obj.x=3;
 var lcg={
     y:'yes'
 }
-```
+```javascript
 
-```
+```javascript
 new运算符
 var obj=new Object();
 obj.z=33;
-```
+```javascript
 
 #### 5. 原型
 
@@ -63,7 +63,7 @@ obj.z=33;
     5. 示例：（其实就是个寄生组合式继承）
     
 
-```
+```javascript
 // Shape - superclass
 function Shape() {
   this.x = 0;
@@ -87,7 +87,7 @@ Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
-```
+```javascript
 
 
 #### 7. 继承
@@ -105,7 +105,7 @@ var rect = new Rectangle();
 5. 在非严格模式中，这些情况下delete会返回false。
     
 
-```
+```javascript
 delete Object.prototype //属性是不可配置的
 
 var x=1;
@@ -113,7 +113,7 @@ delete this.x           //无法删除全局变量
 
 function a(){}
 delete this.a;          //同样无法删除全局函数
-```
+```javascript
 
 #### 9. 检测属性
 1. 常见的方法：
@@ -126,38 +126,38 @@ delete this.a;          //同样无法删除全局函数
     3. propertyIsEnumerable()只有是自有属性同时可枚举性为true才会返回true
     4. 下面是示例
 
-```
+```javascript
 var o={a:12}
 "a" in o ; //true 
-```
+```javascript
 
 
-```
+```javascript
 var o={a:12}
 o.hasOwnproperty('x'); //true
-```
+```javascript
 
 
-```
+```javascript
 var o={a:12}
 o.propertyIsEnumerable('x'); //true
-```
+```javascript
 
     
 3. 另一种更简单的方法
 
 
-```
+```javascript
 var o={a:12}
 o.x !== undefined  //true
-```
+```javascript
 >但是上述方法有一个缺憾，比如
 
 
-```
+```javascript
 var o={a:undefined}
 o.x !== undefined  //false
-```
+```javascript
 
 >但是显然上面的对象是存在这个属性的
 
@@ -181,7 +181,7 @@ o.x !== undefined  //false
 >下面用getter实现一种“神奇属性”。
 
 
-```
+```javascript
 var random={
     get octet(){
         return Math.floor(Math.random()*256)
@@ -193,7 +193,7 @@ var random={
         return Math.floor(Math.random()*65536)-32768;
     }
 }
-```
+```javascript
 
 #### 11.对象的三个属性
 
@@ -202,9 +202,9 @@ var random={
     2. 检测：isPrototypeOf()方法
 
 
-```
+```javascript
 a.isPrototypeOf(b);
-```
+```javascript
 2. 类属性
     1. 定义：用来表示对象类型信息的一个字符串
     2. 获取：调用toString()，然后返回第八个到倒数第二个位置之间的字符
@@ -222,11 +222,11 @@ a.isPrototypeOf(b);
 3. 测试：
 
 
-```
+```javascript
 var o={x:1,y:{z:2}};            //测试对象
 var s=JSON.stringify(o);
 var p=JSON.parse(s);
-```
+```javascript
 
 #### 13.对象方法
 

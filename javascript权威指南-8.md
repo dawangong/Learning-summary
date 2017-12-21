@@ -1,7 +1,7 @@
 #### 1. 使用构造函数定义范围类
 
 
-```
+```javascript
    function Range(from,to) {
        this.from=from;
        this.to=to;
@@ -20,26 +20,26 @@
    let ranges=new Range(1,10);
    console.log(ranges.includes(3));     //true
    ranges.forEach(console.log);         //1-10
-```
+```javascript
 
 #### 2. constructor属性
 
 1. 每个javascript函数（除es5 Function.BIND()方法）都会自动拥有一个prototype属性。这个属性的值是一个对象。这个对象包含唯一一个不可枚举的属性constructor。
 
 
-```
+```javascript
 function F(){}
 var p=F.prototype;
 var c=p.constructor;
 c===F                   //true
-```
+```javascript
 2. 可以看出来构造函数原型中预先定义好了constructor属性。这意味着通常继承的constructor均指代它们的构造函数。由于构造函数是类的“公共标识”，因此这个constructor属性为对象提供了类。
 
 
-```
+```javascript
 var o=new F();
 o.constructor===F       //true
-```
+```javascript
 
 3. 问题：之前写的范围了的constructor属性被一个新的对象覆盖替换掉了，所以Range类的实例不具有constructor属性，解决方法有两个。
     1. 显示的指定constructor属性
@@ -47,7 +47,7 @@ o.constructor===F       //true
 
 >显示的指定constructor属性
     
-```
+```javascript
    function Range(from, to) {
     this.from = from;
     this.to = to;
@@ -68,11 +68,11 @@ let ranges = new Range(1, 10);
 console.log(ranges.includes(3)); //true
 ranges.forEach(console.log); //1-10
 
-```
+```javascript
 
 >在预定义原型时依次给原型添加方法
 
-```
+```javascript
    function Range(from,to) {
        this.from=from;
        this.to=to;
@@ -92,7 +92,7 @@ ranges.forEach(console.log); //1-10
    console.log(ranges.includes(3));     //true
    ranges.forEach(console.log);         //1-10    
   
-```
+```javascript
 
 #### 3. 类的扩充
 
@@ -100,13 +100,13 @@ ranges.forEach(console.log); //1-10
 2. 举例：
 
 
-```
+```javascript
 if(!Function.prototype.bind){
     Function.prototype.bind=function(o){
         //代码
     }
 }
-```
+```javascript
 
 3. 可以给Object.prorotype添加方法，从而使所有对象都可以调用这些方法。但这种做法不推荐。
 
@@ -130,7 +130,7 @@ if(!Function.prototype.bind){
 >另一种可能性的解决方案是使用构造函数的名字而不是构造函数本身作为标识符。一个窗口的Array和另一个窗口的Array名字是一样的。在一些javascript中为函数提供了非标准的属性name，用来表示函数名。
 
 
-```
+```javascript
 function type(o){
     var t,c,n;
     if(o===null){
@@ -159,7 +159,7 @@ function type(o){
         return this.name=this.toString().match(/function\s*([^(]*])\(/)[1];
     };
 }
-```
+```javascript
 #### 6. 鸭式辩型
 
 1. 定义：关注对象能做什么，而不是对象的类是什么
@@ -174,7 +174,7 @@ function type(o){
 >利用鸭式辨型实现的函数
 
 
-```
+```javascript
 function quackImplements(o/*,...*/){
     for(var i=1; i<arguments.length;i++){
         var arg=arguments[i];
@@ -197,14 +197,14 @@ function quackImplements(o/*,...*/){
     }
     return true;
 }
-```
+```javascript
 
 #### 7. javascript中的面向对象技术
 
 1. 集合类例子：
 
 
-```
+```javascript
 /*值的任意集合*/
             function Set(){//这是一个构造函数
                 this.value = {}; //集合数据保存在对象的属性里
@@ -281,12 +281,12 @@ function quackImplements(o/*,...*/){
             };
             Set._v2s.next = 100; //设置初始id值
 
-```
+```javascript
 2. 枚举类例子：
 
 >使用枚举类型定义一副扑克牌
 
-```
+```javascript
 
 定义一个表示“ 玩牌” 的类
 
@@ -352,7 +352,7 @@ function Deck() {
     //创建一副新扑克牌，洗牌并发牌
     var deck = (new Deck()).shuffle();
     var hand = deck.deal(13).sort(Card.orderBySuit);
-```
+```javascript
 
 
 3. 标准转换方法
@@ -364,7 +364,7 @@ function Deck() {
 >在下面的例子中，Set类并没有定义上述方法中的任何一个。Javascript中没有那个原始值表示集合，因此也没必要定义valueOf()方法，但该类包含toString()、toLocaleString()、和toJSON()方法。可以用如下代码来实现。注意extend()函数的用法，这里使用extend()来向Set.prototype来添加方法：
 
 
-```
+```javascript
  //将这些方法添加至Set类型的原型对象中
             extend(Set.prototype, {
                 //将集合转换为字符串
@@ -393,7 +393,7 @@ function Deck() {
             });
              //对于要从JSON转换为字符串的集合都当做数组来对待
             Set.prototype.toJSON = Set.prototype.toArray;
-```
+```javascript
 
     
 4. 比较方法
@@ -401,7 +401,7 @@ function Deck() {
 
 >如下：给Set添加equals()方法
 
-```
+```javascript
 Set.prototype.equals = function(that){
   if(this===that) return true;
   if(!(that instanceof Set)) return false;
@@ -426,7 +426,7 @@ Range.prototype.compareTo = function(that){
  
 则我们对range对象数组排序可以如：
 ranges.sort(function(a,b){return  a.compareTo(b);});
-```
+```javascript
 
 
 5. 方法借用
@@ -434,7 +434,7 @@ ranges.sort(function(a,b){return  a.compareTo(b);});
 
     2. 多个类中的方法可以共用一个单独函数。比如，Array类通常定义了一些内置的方法，如果定义了一个类，它的实例是类数组的对象，则可以慈宁宫Array.prototype中函数复制至所定义的类的原型对象中。如果以经典面向对象语言的视觉来看javascript的话，把一个类的方法用到其他类中的做法也陈做“多重继承”（multiple inherittance）。然而在javaScript并不是经典的面向对象语言，我们更倾向于将这种方法重用更正式的称为“方法借用”（borrowing）。
     
-```
+```javascript
              /*方法借用的泛型实现*/
             var genric = {
                 //返回一个字符串，这个字符串包含构造函数的名字（如果构造函数包含名字）
@@ -471,14 +471,14 @@ ranges.sort(function(a,b){return  a.compareTo(b);});
                     return true; //如果所有属性都匹配，两个对象相等
                 }
             };
-```
+```javascript
 
 
 6. 私有状态
  
 >通过变量闭包在一个构造函数内模拟实现私有字段，调用构造函数会创建一个实例，为了做到这点，需要在构造函数内部定义一个函数，并将这个函数赋值给新创建对象的属性。
 
-```
+```javascript
 function Range(from, to) {
     this.from = function() {
         return from;
@@ -497,7 +497,7 @@ Range.prototype.forEach = function(f) {
         f(x);
     }
 }
-```
+```javascript
 
 >tips：这种封装技术造成了更多的系统开销。使用闭包来封装类的状态的类一定比不适用封装的状态变量的等价类运行速度更慢，并且占用更多内存。
 
@@ -505,7 +505,7 @@ Range.prototype.forEach = function(f) {
 
 >可以通过重载这个构造函数让它根据传入参数的不同来执行不同的初始化方法。
 
-```
+```javascript
 function Set(argument) {
     this.value = {};
     this.n = 0;
@@ -515,20 +515,20 @@ function Set(argument) {
         this.add.apply(this, arguments);
     }
 }
-```
+```javascript
 
 >这段定义的Set()构造函数可以显式的将一组元素作为参数列表传入，也可以传入元素组成的数组。但这个构造函数与有多义性，如果集合的某个成员是一个数组就无法通过构造函数来创建这个集合了。
 
 >下面使用工厂方法来初始化Set对象
 
 
-```
+```javascript
 Set.fromArray=function (a) {
     s=new Set();          //创建一个空集合
     s.add.apply(s, a);    //将数组a的成员作为参数传入add()方法
     return s;             //返回新集合
 }
-```
+```javascript
 #### 8. 子类
 >在面向对象编程中，类b可以继承类a。我们将a成为父类，b成为子类。
 
@@ -537,7 +537,7 @@ Set.fromArray=function (a) {
 3. 定义子类：用一个简单的函数创建简单的子类
 
 
-```
+```javascript
 function defineSubclass(superclass, constructor, methods, statics) {
     constructor.prototype = inherit(superclass.prototype);
     constructor.prototype.constructor = constructor;
@@ -550,14 +550,14 @@ function defineSubclass(superclass, constructor, methods, statics) {
     }
     return constructor;
 }
-```
+```javascript
 
 4. 构造函数和方法链
 
 >定义子类时，我们往往希望对父类的进行修改或扩充，而不是完全替换掉。为了做到这一点，构造函数和子类的方法需要调用或链接到父类构造函数和父类方法。
 
 
-```
+```javascript
 function NonNullSet(){
 //仅链接到父类
 //作为普通函数调用父类的构造函数来初始化通过该构造函数调用创建的对象
@@ -593,7 +593,7 @@ superclass.prototype.add.apply(this,arguments);
 }
 return constructor;
 }
-```
+```javascript
 >上例中用一个函数将创建子类的代码包装起来，这样就可以在构造函数和方法链中使用父类的参数，而不是通过写死某个父类的名字来使用它的参数。也就是说如果想修改父类，只须修改一处代码即可，而不必对每个用到父类类名的地方都做修改。
 值得强调：类似这种创建类工厂的能力是js语言动态特性的一个体现，类工厂是一种非常强大和有用的特性。Java和c++中没有的。
 
@@ -602,7 +602,7 @@ return constructor;
 >之前上面定义的集合可以根据特定的标准对集合成员做限制，而且使用了子类的技术来实现的这种功能，所创建的自定义子类使用了特定的过滤函数来对集合中的成员做限制。父类和过滤函数的每个组合都需要创建一个新的类。
 然而还有更好的方法来写成这种需求，即OOP中一条广为人知的设计原则：“组合优于继承”可以利用组合的原理定义一个新的集合实现，它“包装”了另外一个集合对象，在将受限制的成员过滤掉之后会用到这个集合对象。下面将展示其工作原理。
 
-```
+```javascript
 var FilteredSet = Set.extend(function FilteredSet(set,filter){
    this.set =set;
    this.filter= filter;
@@ -628,7 +628,7 @@ contains:function(v){return  this.set.contains();},
 size:function(){return  this.set.size();},
 foreach:function(f,c){this.set.foreach(f,c);}
 });
-```
+```javascript
 
 >上面这个例子使用组合的一个好处是，只须创建一个单独的FilteredSet子类即可。可以利用这个类的实例来创建任意带有成员限制的集合实例。
 
@@ -637,7 +637,7 @@ foreach:function(f,c){this.set.foreach(f,c);}
     2. 示例：
     
 
-```
+```javascript
 /*抽象类和非抽象类Set类的层次结构*/
         //这个函数可以用作任何抽象方法，非常方便
         function abstractmethod() {throw new Error("abstract method");} 
@@ -784,12 +784,12 @@ foreach:function(f,c){this.set.foreach(f,c);}
                 }
             }
         );
-```
+```javascript
 
 #### 9. ECMAScript5中的类
 1. 定义不可枚举的属性
 
-```
+```javascript
 /**
              *定义不可枚举的属性
              **/
@@ -820,11 +820,11 @@ foreach:function(f,c){this.set.foreach(f,c);}
                         var idprop = "|**objectId**|"; //假设这个属性没有用到
                         var nextid = 1; //给它设定初始值
                     }()); //包装函数立即执行
-```
+```javascript
 2. 定义不可变类
 
 
-```
+```javascript
 /**
              *创建一个不可变的类，它的属性和方法都是只读的
              **/
@@ -870,12 +870,12 @@ foreach:function(f,c){this.set.foreach(f,c);}
                 
                 var c = Range2(100,22); //
                 console.log(c.toString()) //=> (100...22)
-```
+```javascript
 
 3. 封装对象状态
 
 
-```
+```javascript
 /**
              *封装对象状态
              **/
@@ -925,12 +925,12 @@ foreach:function(f,c){this.set.foreach(f,c);}
                 foreach:function(f){for(var x = Math.ceil(this.from);x <= this.to; x++) f(x);},
                 toString:function(){return "(" + this.from + "..." + this.to + ")";}
             });
-```
+```javascript
 4. 子类和ECMAScript5
 
 >下面实现子类困难之处在于需要使用难看的属性描述符
 
-```
+```javascript
 /**
          * StringSet:利用ECMAScript5的特性定义子类
          **/
@@ -970,13 +970,13 @@ foreach:function(f,c){this.set.foreach(f,c);}
                 }
             }
         });
-```
+```javascript
 5. 属性描述符
 
 >来看看属性操作示例
 
 
-```
+```javascript
 /**
              * ECMAScript5属性操作
              * 给Object.prototype定义properties()方法，这个方法返回一个表示调用它的对象上的属性名列表的对象
@@ -1067,7 +1067,7 @@ foreach:function(f,c){this.set.foreach(f,c);}
                 //这里用到了刚定义的方法
                 Properties.prototype.properties().hide();
             }());//执行匿名函数
-```
+```javascript
 #### 10.模块
 1. 什么叫模块？
     - 解答：类不是唯一的模块化代码方式。一般来讲，模块就是一个工具盒。模块文件可以包含一个类定义、一组相关的类、一个使用函数库或者是一些待执行的代码。只要以模块的形式编写代码。任何javascript代码段就可以当做一个模块
@@ -1080,7 +1080,7 @@ foreach:function(f,c){this.set.foreach(f,c);}
     - 进一步：匿名函数自执行
     - 再者：es6自带的模块功能
 
-```
+```javascript
 /**
          * 模块函数中的Set类
          **/
@@ -1118,4 +1118,4 @@ foreach:function(f,c){this.set.foreach(f,c);}
             //它变成第一行代码所芝的表达式的值
             return Set;
         }());
-```
+```javascript

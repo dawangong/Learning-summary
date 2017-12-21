@@ -1,7 +1,7 @@
 #### 1. DOM概述
 文档对象模型(DOM)是表示和操作HTML和XML文档内容的基础API。HTML文档的树状结构包含表示HTML标签或元素（如<body>、<p>）和表示文本字符串的节点，它也可以包含表示HTML注释的节点。
 
-```
+```javascript
 <html>
          <head>
                    <title>SampleDocument</title>
@@ -11,7 +11,7 @@
                    <p>Thisis a <i>simple</i> document.</p>
          </body>
 </html>
-```
+```javascript
 #### 2. 选取文档元素
 
 - 用指定的id属性
@@ -25,44 +25,44 @@
 >任何HTML元素可以有一个id属性，在文档中该值必须唯一，即同一个文档中的两个元素不能有相同的ID。可以用Document对象的getElementById()方法选取一个基于唯一ID的元素。
 
 
-```
+```javascript
 var section1 = document.getElementById(“section1”);
-```
+```javascript
 
 
 ##### 2-2. 通过名字选取元素
 
 >基于name属性的值选取HTML元素，可以使用Document对象的getElementsByName()方法。
 
-```
+```javascript
 var rabiobuttons =document.getElementsByName(“favorite_color”);
-```
+```javascript
 
 >它返回一个NodeList对象，后者的行为类似一个包含若干Element对象的只读数组。
 有些元素可以作为Document属性仅通过名字来选取：（最好不用）
 
 
-```
+```javascript
 //针对<formname=”shipping_address”>元素，得到Element对象
 Var form = document.shipping_address；
-```
+```javascript
 
 ##### 2-3. 通过标签名选取元素
 
 >Document对象的getElementsByTagName()方法可用来选取指定类型（标签名）的所有HTML或XMl元素，返回一个NodeList对象。
 
 
-```
+```javascript
 var spans =document.getElementsByTagName(“span”);
-```
+```javascript
 
  
 >选取文档中的第一个<p>元素：
 
 
-```
+```javascript
 var firstpara =document.getElementsByTagName(“p”)[0];
-```
+```javascript
 
  
 >Element类也定义了getElementsByTagName()方法，但是它只选取调用该方法的元素的后代元素。
@@ -72,59 +72,59 @@ getElementsByName()和getElementsByTagName()都返回NodeList对象，而类似d
 这些对象都是只读的类数组对象。有length属性，也可以像真正的数组一样索引。
 
 
-```
+```javascript
 for(var i = 0; I <document.images.length; i++)  //循环所有的图片
         document.images[i].style.display =“none”;  //……隐藏它们
-```
+```javascript
 ##### 2-4. 通过CSS类选取元素
 >getElementsByClassName()方法，基于其class属性值中的标识符来选取成组的文档元素。
 返回值是一个实时的NodeList对象，包含文档或元素所有匹配的后代节点。只需要一个参数，但是该字符串可以有多个空格隔开的标识符组成。只有当元素的class属性值包含所有指定的标识符时才匹配，但是标识符的顺序是无关紧要的。
 
 
-```
+```javascript
 // 查找其class属性值中包含“warning”的所有元素
 var warnings =document.getElementsByClassName(“warning”);
 //查找以”log”命名并且有“error”和“fatal”类的元素的所有后代
 var log = document.getElementById(“log”);
 var fatal = log.getElementsByClassName(“fatalerror”);
-```
+```javascript
 ##### 2-5. 通过css选择器选取元素
 
 >CSS样式表有一种非常强大的语法，选择器，用来描述文档中的若干或多组元素。
 - 例子：元素可以用ID、便签名或类来描述：
 
-```
+```javascript
 #nav//id=”nav”的元素
 div//所有<div>元素
 .warning//所有在class属性值中包含了”warning”的元素
-```
+```javascript
 >更一般地，元素可以基于属性值来选取：
 
-```
+```javascript
 p[lang=”fr”]   //所有使用法语的段落，如：<plang=”fr”>
 *[name=”x”]   //所有包含name=”x”属性的元素
-```
+```javascript
 
 >这些基本的选择器可以组合使用：
 
 
-```
+```javascript
 span.fatal.error  //其class中包含“fatal”和“error”的所有<span>元素
 span[lang=”fr”].warning  //所有使用法语的且其class中包含“warning”的<span>元素
-```
+```javascript
 >选择器可以指定文档结构：
 
-```
+```javascript
 #log span //id=”log”元素的后代元素中的所有的<span>元素
 #log>span  //id=”log”元素的子元素中的所有<span>元素
 body>h1:first-child  //<body>的子元素中的第一个<h1>元素
-```
+```javascript
 
 >选择器可以组合起来选取多个或多组元素：
 
-```
+```javascript
 div,#log   //所有<div>元素，以及id=”log”的元素
-```
+```javascript
 
 >方法querySelectorAll()接受包含一个css选择器的字符串参数，返回一个表示文档中匹配选择器的所有元素的NodeList对象。
 
@@ -158,20 +158,20 @@ div,#log   //所有<div>元素，以及id=”log”的元素
 
 >表示HTML文档元素的HTMLElement对象定义了读/写属性，它们反映了元素的HTML属性。HTMLElement定义了通用的HTTP属性（如id、标题lang和dir）的属性，以及时间处理程序属性（如onclick）。
 
-```
+```javascript
 var image =document.getElementById(“myimage”);
 var imgurl = image.src;      //src属性是图片的URL
 image.id === “myimage”    // 判断要查找图片的id
-```
+```javascript
 ##### 4-2. 获取和设置非标准的html属性 
 
 >Element类型还定义了getAttribute()和setAttribute()方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
 
-```
+```javascript
 var image = document.images[0];
 var width =parseInt(image.getAttribute(“WIDTH”));
 image.setAttribute(“class”,”thumbnail”);
-```
+```javascript
 
 >Element类型还定义了相关的方法，hasAttribute()和removeAttribute(),它们用来检测命名属性是否存在和完全删除属性。
 
@@ -186,11 +186,11 @@ HTML5还在Element对象上定义了dataset属性。该属性指代了一个对�
 ##### 4-4. 作为Attr节点的属性
 >Node类型定义了attribute属性。对于Element对象，attribute属性是只读的类数组对象，它代表元素的所有属性。
 
-```
+```javascript
 document.body.attributes0]   //<body> 元素的第一个属性
 document.body.attributes.bgcolor  //<body>元素的bgcolor属性
 document.body.attributes[“ONLOAD”]//<body>元素的onload属性
-```
+```javascript
 #### 5. 元素的内容
 ##### 5-1. 作为HTML的元素内容
 读取Element的innerHTML属性作为字符串标记返回那个元素的内容。
@@ -200,13 +200,13 @@ insertAdjacentHTML()方法，将任意的HTML标记字符串插入到指定的�
 ##### 5-2. 作为纯文本的元素内容
 >查询纯文本形式的元素内容，或者在文档中插入纯文本。标准方法是用Node的textContent属性来实现：
 
-```
+```javascript
 var para = document.getElementsByTagName("p")[0]; //文档中第一个<p>
 var text = para.textContent; //文本是“This is a simple document.”
 para.textContent = "Hello World";  //修改段落内容
 在IE中，可以用Elemen的innerText属性来代替。
 textContent属性就是将指定元素的所有后代Text节点简单地串联在一起。
-```
+```javascript
 ##### 5-3. 作为Text节点的元素内容
 >处理元素的内容来是当做一个子节点列表，每个子节点可能有它自己的一组子节点。当考虑元素的内容时，通常感兴趣的是它的Text节点。在XML文档中，你也必须准备好处理CDATASection节点——它是Text的子类型，代表了CDATA端的内容。
 
@@ -230,9 +230,9 @@ n.parentNode.replaceChild(document.createTextNode("[REDACTED]"),n);
 ##### 6.4 DocumentFragment
 >DocumentFragment是一种特殊的Node,它作为其他节点的一个临时容器。创建一个DocumentFragment:
 
-```
+```javascript
 var frag = document.createDocumentFragment();
-```
+```javascript
 
 >DocumentFragment的特殊之处在于它使得一组节点被当做一个节点看待。
 
@@ -280,11 +280,11 @@ getBoundingClientRect()返回的对象还包含width和height属性。
 每个Form元素都有一个onsubmit事件处理程序来侦查表单提交，还有一个onreset事件处理程序来侦查表单重置。表单提交前调用onsubmit程序；它通过返回false能够取消提交动作。onsubmit事件处理程序只能通过单击“提交按钮来触发”。直接调用表单的submit()方法不触发onsubmit事件处理程序。
 onreset事件处理程序和onsubmit是类似的。它在表单重置之前调用，通过返回false能够阻止表单元素被重置。
 
-```
+```javascript
 <form… onreset=”return confirm(‘Reallyerase All input and start over?’)”>
          <buttontype=”reset”>Clear and Start</button>
 </form>
-```
+```javascript
 
 ##### 8-4. 开关按钮
 
@@ -310,7 +310,7 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
 
 >document.write()会将其字符串参数连接起来，然后将结果字符串插入到文档中调用它的脚本元素的位置。当脚步执行结束，浏览器解析生成的输出并显示它。例如，如下代码使用write()动态把信息输出到一个静态的HTML文档中：
 
-```
+```javascript
 <script>
          document.write(“<p>Documenttitle:”+document.title);
          document.write(“<br>URL:”+document.URL);
@@ -318,7 +318,7 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
          document.write(“<br>Modifiedon:”+document.lastModified);
          document.write(“<br>Accessedon:”+new Date());
 </script>
-```
+```javascript
 
 >只有在解析文档时才能使用write()方法输出HTML到当前文档中。
 
@@ -334,8 +334,8 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
 
 > 如下代码，一个HTML元素创建了一个可编辑的区域：
 
-```
+```javascript
 <div id = "editor" contenteditable>
 Click to edit
 </div>
-```
+```javascript

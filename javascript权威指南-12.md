@@ -14,11 +14,11 @@ CSS是个复杂的标准。CSS本身就可以写一本书。为了理解CSS校�
 
 >两种方式将一组定义视觉表现的CSS属性和对于的HTML元素关联在一起。第一种是通过给每个单独的HTML元素设置style属性的方式，称为内联样式：
        
-```
+```javascript
  <p style="margin:20px;border:2px red solid;">
             samll letter
 </p>
-```
+```javascript
 
 尽管如此，通常将单独的HTML元素和CSS样式表分开，并把他们定义在一个样式表（stylesheet）中会更有用，样式表通过选择器将一组样式属性和使用选择器（selector）描述的一组HTML元素关联在一起。一个选择器基于ID，类名或标签或更多条件的指定（或“选择”）一个或多个文档中的元素。
 
@@ -51,13 +51,13 @@ font:blod italic 24px helvetica
 在不同的浏览器中不同名字的CSS属性一起工作，你可以能发现一个属性定义一个类的方式比较好
 
 
-```
+```javascript
 .radius10{
 border-radius:10px; /*征对现代浏览器*/
 -moz-border-radius:10px; /*征对firefox 3.x*/
 -webkit-border-radius:10px; /*征对safari 3.2和4*/
 }
-```
+```javascript
 
 >前沿的CSS：目前，css正常进行一场变革，现代的浏览器厂商正在实现一些强大的新样式属性：border-radius、text-shadow、box-shadow、column-count。还有一个革命性的css新特征是web字体。利用css的@font-face规则可以下载并使用自己定义的字体。另外还有css动画过渡，css筛选器都值得关注。
 
@@ -103,16 +103,16 @@ CSS的position指定了应用到元素上的定位类型，如下是4个可能�
 在老版的IE和新版的CSS都有一些例外，在IE6之前和当IE6-8在怪异模式下，显示一个页面（页面缺少<!DOCTYPE>或有一个不严格的doctype时），width和height属性缺少是包含内边距和边框宽度的。IE的行为是一个bug，但是IE的非标准和模型通常也很有用。认识到这一点，CSS3引进了box-sizing属性，默认值是content-box,它指定执行页面的标准盒模型，如果替换为box-sizing:border-box,浏览器将会为那个元素应用IE的盒模型，即：width和height包含边框和内边框。当想以百分比形式为元素设置总体尺寸，又想以像素指定单位边框和内边距时，边框盒模型特别有用：
 
       
-```
+```javascript
   <div style="box-sizing:border-box;width: 50%;padding: 10px;border: 2px solid red;"></div>
-```
+```javascript
 
 box-sizing属性在当今的浏览器中都支持，但是还没通用实现。比如为兼容标准未成熟的box-sizing属性，可以在chrome和safari中使用-webikit-box-sizing，在firefox中，使用-moz-box-sizing。在IE后等其他浏览器更高的版本中，可以使用不带前缀的box-sizing。
 
 
-```
+```javascript
 <div style="width: calc(50%-12px);padding:10px;border: solid red 2px;"></div><!--请注意表达式方式-->
-```
+```javascript
 
 >在IE9中支持使用calc()计算css的值。在Firefox4中为-moz-calc()。
 
@@ -135,10 +135,10 @@ visibility和display属性对绝对和固定定位的元素影响是等价的。
 >CSS3的opacity属性处理元素的透明，该属性值为0-1之间的数字、opacity属性在当今所有的浏览器都支持。除了IE，IE提供可选方式filter。例如让元素设置为75%不透明，可以使用以下代码：
 
             
-```
+```javascript
 opacity:0.75
 filter:alpha(opacity=75);
-```
+```javascript
 
 ##### 2-5. 部分可见：overflow和clip
 
@@ -157,65 +157,65 @@ filter:alpha(opacity=75);
 >rect(top right bottom left)使用例子
 
     
-```
+```javascript
 style="clip:rect(0px 100px 100px 0);"
 style = "clip:rect(auto 100px auto auto);"
-```
+```javascript
 
 #### 3. 脚本化内联样式
 
 脚本化css最直接了当的方法就是更改单独的文档元素的style属性，但是大多数HTML属性，style也是元素对象的属性。它可以在javascript操作，但是style属性不同寻常：它的值不是字符串，而是一个CSSStyleDeclaration对象。让style对象的javascript属性代表了HTML代码中通过的指定的css属性。例如让元素e的文本变大号、加粗和蓝色，可以使用如下代码设置font-size,font-weight和color样式属性对于的javascript属性。
 
-```
+```javascript
  var e = document.getElementById("bb");
  e.style.fontSize = "24px";
  e.style.fontWeight = "bold";
  e.style.color = "#007F9F";
  //<div id="bb">校本化内联样式</div>
  //<div id="bb" style="font-size: 24px; font-weight: bold; color: rgb(0, 127, 159);">校本化内联样式</div>
-```
+```javascript
 
 >使用CSSStyleDeclaration对象的style属性时，记住所有值都应该是字符串。在样式表（HTML）style属性中，可以如下书写
 
 
-```
+```javascript
 position:absolute;font-family: sans-serif;background-color:#FFFFFF;
-```
+```javascript
 
 
 >在javascript为元素e完成同样的事情，需要将值放在引号中
 
-```
+```javascript
 e.style.position = "absolute";
 e.style.fontFamily = "sans-serif";
 e.style.backgroundColor = "#FFFFFF";
-```
+```javascript
 
 >而且，javascript设置样式属性需要包含单位，因此，设置left属性应该像下面：
 
-```
+```javascript
 e.style.left = "300px";
-```
+```javascript
 
 >如果需要计算值来设置left属性，需要保证在后面加上单位：
 
-```
+```javascript
 e.style.left = (x0 + left_margin + left_border + left_padding) + "px";
-```
+```javascript
 
 >回想一下,一些css属性（如margin）是margin-top/margin-right/margin-bottom/margin-left)的复合属性。CSSStyleDeclaration对象也有与之对于的复合属性，例如。也能设置设置magin属性
 
-```
+```javascript
  e.style.margin = topMargin + "px" + rightMargin + "px" + bootomMargin + "px" + leftMargin + "px";
-```
+```javascript
                
 >独立设置4个margin属性值更加便捷：
 
-```
+```javascript
 e.style.marginTop = topMargin + "px";
 e.style.marginRight = rightMargin + "px";
 ...
-```
+```javascript
 
                 
 HTML元素的style属性是它的内联样式，它覆盖在样式表中的任何样式什么。内联样式一般在设置样式值时非常有用，就像上面所说的一样。CSSStyleDeclaration对象的属性可以理解为代表内联样式，但是它的返回有意义的值：javascript代码已经设置过值或者HTML元素显式的设置了想要的内联样式的值。
@@ -225,14 +225,14 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
 >有时，发现单个字符串值来设置或查询元素的内联样式反比作为CSSStyleDeclaration对象更加简单。为此，可以使用元素的getAttribute()和setAttribute()方法或CSSStyleDeclaration对象的cssText属性来实现
 
 
-```
+```javascript
   //两者都可以设置e的样式属性为字符串s
   e.setAttribute("style", s);
   s = e.style.cssText;
   //两者都可以查询元素的内联样式
   s = e.getAttribute("style");
   s = e.style.cssText;
-```
+```javascript
            
 >CSS动画
 
@@ -309,17 +309,17 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
                 }
 >shake()和fadeOut()都能接受可选的回调函数做为第二个参数，如果指定了，当动画结束时将被调用。该动画元素将作为回调函数的参数传递进去。下面的代码创建了一个按钮，单击时，作用震动并弹出。
 
-```
+```javascript
  <button onclick="shake(this,fadeOut)">点击我</button>
-```
+```javascript
 
 注意，shake()和fadeOut()示例函数之间非常相似，都能作为类似css属性动画的模板。客户端库，如jQury通常支持预定义的视觉效果，因此，除非创建特别复杂的视觉效果，实际上不用写类似shake()动画函数。scriptaculous是早期一个值得关注的类库，它是为prototype框架设计的http://scripty2.com/
 
  >为了避免使用任何脚本，CSS3的过渡函数模块定义了再样式表中指定动画效果的方式。例如，替代了类似fadeOut()这样的函数，可以使用如下的css:
 
-```
+```javascript
 .fadeable{transition:opacity .5s ease-in}
-```
+```javascript
 
     
 #### 4. 脚本化CSS类
@@ -328,20 +328,20 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
 
 >例如，假设想让用户对文档中的单独段落（或其它元素）引起注意。首先，为任意元素定义一个名为"attention"的类
 
-```
+```javascript
 .attention{/*吸引用户注意*/
             background-color:yellow;
             font-weight: bold;
             border: solid black 2px;
             }
-```
+```javascript
             
 >标识符class在javascript中是保留字，所以HTML属性class在javascript代码中可以用于十月calssName的javascript代码。如下的代码设置和清除元素的className属性来为元素添加和移除"attention"类：
 
-```
+```javascript
  function grabAttention(e){e.className = "attention";}
  function releaseAttention(e) {e.className = "";}
-```
+```javascript
 
 HTML元素可以有多个CSS类名，class属性保存了一个用空格隔开的类名列表。className属性是一个容易误解的名字：classNames可能更好。上面的函数假设className属性只指定零个或一个类名，如果有多个类名就无法工作了。如果元素已经有一个类，调用grabAttention将覆盖已经存在的类。
 
@@ -449,9 +449,9 @@ HTML5为了解决这个问题，为每个元素定义了classList属性。该属
 
 >document.styleSheets[]数组的元素是CSSStyleSheet对象。CSSStyleSheet对象有一个cssRules[]数组，它包含所有样式表规则：
 
-```
+```javascript
 var firstRule = document.styleSheets[0].cssRules[0];
-```
+```javascript
 
             
 >IE使用不同的属性名rules代替cssRules。
@@ -462,9 +462,9 @@ CSSRule对象有两个属性可以便捷的使用。（在标准API中，非样�
 
 >除了查询和修改样式表中已存在的规则以外，也能向样式表添加和从中删除规则。标准的API接口定义了insertRule()和deleteRule()方法来添加和删除规则。
 
-```
+```javascript
  document.styleSheets[0].insertRule("H1 {text-weight:bold}",0);
-```
+```javascript
 
 IE不支持insertRule()和deleteRule()，但定义了大致等效的函数addRule()和removeRule()。（除了名字以外）仅有的不同是addRule()希望选择器文本和样式文本作为两个参数。
 

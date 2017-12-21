@@ -70,17 +70,17 @@ noupdate | obsolete | progress | updateready
 ##### 2-1. 设置JavaScript对象属性为事件处理程序
 
 
-```
+```javascript
 window.onload=funciton(){
     //code
 }
-```
+```javascript
 
 ##### 2-2. 设置HTML标签属性为事件处理程序
 
-```
+```javascript
 <button onclick="alert('hello');"></button>
-```
+```javascript
 
 cols1 | cols 2 | cols 3 | cols 4
 ---|--- |--- |---
@@ -92,7 +92,7 @@ onblur | onoffline | onredo |
 >当指定一串JavaScript代码作为HTML事件处理程序属性时，浏览器会把代码串转换为类似如下的函数中：
 
 
-```
+```javascript
 funciton(event){
     with(document){
         with(this.form || {}){
@@ -102,7 +102,7 @@ funciton(event){
         }
     }
 }
-```
+```javascript
 
 ##### 2-3. addEventListener()
 
@@ -111,9 +111,9 @@ funciton(event){
 - 参数三：该参数是一个布尔值，一般情况下，会给这个参数传递false。如果true，那么函数注册为捕获事件处理程序。
 
 
-```
+```javascript
 document.getElementById("id").addEventListener("click", handMouseMove,false);
-```
+```javascript
 
 
 ##### 2-4. removeEventListener()
@@ -121,9 +121,9 @@ document.getElementById("id").addEventListener("click", handMouseMove,false);
 >它同样有三个参数，从对象中删除事件处理程序函数而非添加，它常用于临时注册事件处理程序。
 
 
-```
+```javascript
 document.getElementById("id").removeEventListener("click", handMouseMove,false);
-```
+```javascript
 
 ##### 2-5. attachEvent()
 
@@ -132,7 +132,7 @@ document.getElementById("id").removeEventListener("click", handMouseMove,false);
 >这两种操作的区别：
 
 
-```
+```javascript
 //因为IE不支持事件捕获，所有这两个方法只有两个参数。
 //这两个方法的第一个参数是用带“on”前缀的时间。
 atttachEvent允许相同的事件处理程序注册多次。
@@ -146,7 +146,7 @@ else{
     b.attachEvent("onclick",handler);
     b.detachEvent("onclick",handler);
     }
-```
+```javascript
 
 #### 3. 事件处理程序的调用
 
@@ -157,18 +157,18 @@ else{
 >在IE中，当调用它们事件处理函数时并未传递事件对象。取而代之，通过全局对象window.event来获取事件对象。
 
 
-```
+```javascript
 function(event){
     event = event || window.event;
 }
-```
+```javascript
 
 ##### 3-2. 事件处理程序的运行环境
 
 >当使用addEventListener()注册时，调用的处理程序使用事件目标作为他们的this值。但是，对于attachEvent()来讲这是不对的。
 
 
-```
+```javascript
 function addEvent(target, type, handler){
     if (target.addEventListner)
         target.addEventListner(type,handler,false);
@@ -177,7 +177,7 @@ function addEvent(target, type, handler){
             handler.call(target,event);
         });
 }
-```
+```javascript
 
 ##### 3-3. 事件处理程序的返回值
 
@@ -201,7 +201,7 @@ function addEvent(target, type, handler){
 
 用属性注册的事件处理程序的返回值能用于取消事件的浏览器默认操作。在支持addEventListener()浏览器中，也能通过preventDefault()方法取消事件的默认操作。在IE9之前的IE中，可以通过设置事件对象的returnValue属性为false来达到同样的效果。
 
-```
+```javascript
 function cancelHandler(event){
     var event = event || window.event;
     if (event.preventDefault)
@@ -210,7 +210,7 @@ function cancelHandler(event){
         event.returnValue = false;
     return false;
 }
-```
+```javascript
 
 #### 4. 文档加载事件
 
@@ -222,7 +222,7 @@ function cancelHandler(event){
 >下面定义了whenReady()函数。当文档为操作准备就绪时，传递给whenReady()的函数将会作为Document对象的方法调用。和之前的onLoad()函数不同，whenReady()监听DOMContentLoaded和readystatechange事件，而使用load事件仅仅是为了兼容那些不支持之前事件的较老的浏览器。
 
 
-```
+```javascript
 /* 
  * 传递函数给whenReady()，当文档解析完毕时且为操作准备就绪时， 
  * 函数将作为文档对象的方法调用 
@@ -273,7 +273,7 @@ var whenReady = (function(){
         else funcs.push(f);  
     }  
 }());  
-```
+```javascript
 #### 5. 鼠标事件
 
 

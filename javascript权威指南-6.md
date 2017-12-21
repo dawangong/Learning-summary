@@ -7,22 +7,22 @@
     
 >字面量
 
-```
+```javascript
 var arr=[1,3];
-```
+```javascript
 >new运算符
 
 
-```
+```javascript
 var arr =new Array();
-```
+```javascript
 #### 2.数组的读写
 
 
-```
+```javascript
 var arr=[3,5,7];
 alert(arr[2]);          //7
-```
+```javascript
 
 #### 3.稀疏数组
 
@@ -32,17 +32,17 @@ alert(arr[2]);          //7
 >通过new运算符
 
 
-```
+```javascript
 var arr=new Array(4);
-```
+```javascript
 
 >通过字面量
 
 
-```
+```javascript
 var arr=[];
 arr.length=10;
-```
+```javascript
 
 3. 注意：通过逗号省略创造的不会产生稀疏数组，实际元素undefined
 
@@ -53,9 +53,9 @@ arr.length=10;
 2. 另种尾部添加的方法
 
 
-```
+```javascript
 arr[arr.length]=5;
-```
+```javascript
 
 3. splice方法
     1. 语法：
@@ -85,16 +85,16 @@ arr[arr.length]=5;
 >javascript不支持多维数组，但可以用数组的数组来近似
 
 
-```
+```javascript
 var arr=[[2,3],[,4,5]]      //可以表示两行两列的数组
-```
+```javascript
 #### 6.数组方法
 
 1. join():将数组每一项拼接成字符串，接收一个参数可以控制字符串拼接的符号
 2. sort():对数组进行排序，但是需要传入比较函数
 
 
-```
+```javascript
 <script type="text/javascript">  
 var arr=[{name:'zhangsan',age:'28'},{name:'lisi',age:'45'}]  
 function pai(sx){  
@@ -106,7 +106,7 @@ return obj1[sx]-obj2[sx];
 var k=arr.sort(pai('age'));  
 alert(k[0].age);  
 </script>  
-```
+```javascript
 
 3. reverse():颠倒数组
 4. concat():接收一个参数，将两个数组连接在一起
@@ -128,7 +128,7 @@ alert(k[0].age);
     4. 示例：
 
 
-```
+```javascript
 var arr = ['a', 'b', 'c'];
 
 arr.forEach(function(element) {
@@ -138,7 +138,7 @@ arr.forEach(function(element) {
 // a
 // b
 // c
-```
+```javascript
 
 
 2. map()
@@ -146,10 +146,10 @@ arr.forEach(function(element) {
     2. 示例:
 
 
-```
+```javascript
 var a=[23,4,5,6,7,8];
 var b=a.map(function(x){return x+x})        //[46,8,10,12,14,16];
-```
+```javascript
     
 
 3. filter()
@@ -157,10 +157,10 @@ var b=a.map(function(x){return x+x})        //[46,8,10,12,14,16];
     2. 示例:
     
 
-```
+```javascript
 var a=[23,4,5,6,7,8];
 var b=a.filter(function(x){return x>5})     //[23,6,7,8];
-```
+```javascript
 
 4. some()和every()
 
@@ -172,7 +172,7 @@ var b=a.filter(function(x){return x>5})     //[23,6,7,8];
     3. 参数说明：
     
 
-```
+```javascript
 function(total,currentValue, index,arr)
 
 参数	        描述
@@ -180,7 +180,7 @@ total	        必需。初始值, 或者计算结束后的返回值。
 currentValue	必需。当前元素
 currentIndex	可选。当前元素的索引
 arr	            可选。当前元素所属的数组对象。
-```
+```javascript
 
 >reduceRight() 方法的功能和 reduce() 功能是一样的，不同的是 reduceRight() 从数组的末尾向前将数组中的数组项做累加。
 
@@ -203,9 +203,9 @@ arr	            可选。当前元素所属的数组对象。
 >比如可以这样访问某个字符串
 
 
-```
+```javascript
 var a='abcdefg';
 alert(a[0]);            //a 
-```
+```javascript
 
 

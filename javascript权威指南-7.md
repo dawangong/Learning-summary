@@ -27,17 +27,17 @@
     
 2. 函数调用
 
-```
+```javascript
 function add(x,y){
     return x+y;
 }
 
 add(1,2)            //3
-```
+```javascript
 
 3. 方法调用
 
-```
+```javascript
 var o={
     add:function(x,y){
        return x+y; 
@@ -45,7 +45,7 @@ var o={
 }
 
 o.add(1,2);         //3
-```
+```javascript
 
 >方法调用和函数调用的区别：调用上下文（方法调用的调用上下文为拥有此方法的对象）
 
@@ -66,7 +66,7 @@ o.add(1,2);         //3
         - 如果返回值是引用类型（数组，对象或者函数）的数据，那么这个函数作为构造函数用new运算符执行构造时，运算的结果将被它的返回值取代，这时候，构造函数体内的this值丢失了，取而代之的是被返回的对象。
     3. 构造函数的调用如下：
 
-```
+```javascript
 function Add(){
     //代码
 }
@@ -75,12 +75,12 @@ Add.prototype.check=function(){
 }
 
 new Add();  
-```
+```javascript
 
 6. 间接调用（call,apply）
 
 
-```
+```javascript
 function add(a,b){
     return a+b;
 }
@@ -88,7 +88,7 @@ function add(a,b){
 add.call(this,2,5);     //7
 
 add.apply(this,[2,5]);  //7
-```
+```javascript
 
 >具体的后面介绍
 
@@ -97,14 +97,14 @@ add.apply(this,[2,5]);  //7
 1. 可选形参
 
 
-```
+```javascript
 function add(a,b,c){
     var c=c||3;
     return a+b+c
 }
 
 add(1,2)            //6
-```
+```javascript
 >另外，实参在传递时，也可以选择传入一个null作为占位符，当然也可以用undefined
 
 
@@ -124,14 +124,14 @@ add(1,2)            //6
     4. callee和caller：严格模式下对这两个属性读写都会造成错误。但非严格模式下，callee指代正在执行的函数，而caller是非标准的，虽然大多数浏览器实现了这个属性。callee对递归还是非常有用的。
     
 
-```
+```javascript
 function fac (x){
     if(x<=1){
         return 1;
     }
     return x*arguments.callee(x-1);
 }
-```
+```javascript
 
 #### 4. 自定义函数属性
 1. javascript函数并不是原始值，而是一种特殊对象，也就是说可以拥有属性
@@ -139,12 +139,12 @@ function fac (x){
 3. 如下:
 
 
-```
+```javascript
 function timer(){
     timer.counter=0;
     return timer.counter++;
 }
-```
+```javascript
 
 #### 5. 作为命名空间的函数
 
@@ -152,18 +152,18 @@ function timer(){
 2. 示例：
 
 
-```
+```javascript
 (function(){
     //代码
 })()
-```
+```javascript
 #### 6. 闭包
 
 1. 定义：当一个函数嵌套另一个函数，外部函数将嵌套函数对象作为返回值返回时。
 2. 作用：访问私有变量。
 
 
-```
+```javascript
 function scope(){
     var a=3;
     return function(){
@@ -175,7 +175,7 @@ function scope(){
 alert(a);               //a is not defined
 
 alert(scope()());       //3
-```
+```javascript
 #### 7. length属性
 
 - 在函数体内arguments.length表示传入函数参数的个数。
@@ -188,7 +188,7 @@ alert(scope()());       //3
 2. 示例：
 
 
-```
+```javascript
 function add(x,y){
     return x+y;
 }
@@ -196,7 +196,7 @@ function add(x,y){
 add.call(this,3,4);
 
 add.apply(this,[3,4]);
-```
+```javascript
 
 3. es5严格模式下，call()和apply()的第一个实参都会变成this的值，哪怕传入的实参是原始值甚至null或者undefined。es3非严格模式下,传入的null和undefined都会被全局对象替代，其他原始值则会被相应的包装对象所替代。
 
@@ -210,7 +210,7 @@ add.apply(this,[3,4]);
 3. 示例：
 
 
-```
+```javascript
 function add(a,b){
     return this.x+a+b;
 }
@@ -221,12 +221,12 @@ var o={
 
 var ads=add.bind(o);
 ads(1,2);               //4
-```
+```javascript
 
 >bind的实现
 
 
-```
+```javascript
 if (!Function.prototype.bind) {
  Function.prototype.bind = function (oThis) {
   if (typeof this !== "function") {
@@ -250,12 +250,12 @@ if (!Function.prototype.bind) {
   return fBound;
  };
 }
-```
+```javascript
 #### 10. toString()方法
 >函数也有toString()方法，实际上大多数函数的toString()方法都是返回完整代码
 
 
-```
+```javascript
 function add(a,b){
     return a+b;
 }
@@ -263,18 +263,18 @@ function add(a,b){
 document.write(add.toString());
 
 //function add(a,b){ return a+b;}
-```
+```javascript
 
 #### 11. Function构造函数
 
 
-```
+```javascript
 var f=new Function('x','y','return x+y');
 
 var f=function(x,y){
     return x+y;
 }
-```
+```javascript
 
 >上面两段代码几乎等价
 
@@ -289,7 +289,7 @@ var f=function(x,y){
 >比如计算一堆数字的平均值和标准差
 
 
-```
+```javascript
 var sum=function(x,y){return x+y}
 var square=function(x){return x*x}
 
@@ -297,14 +297,14 @@ var data=[1,1,3,5,5];
 var mean=data.reduce(sum)/data.length;
 var deviations=data.map(function(x){return x-mean});
 var stddev=Math.sqrt(deviations.map(square).reduce(sum)/(data.length-1));
-```
+```javascript
 #### 13. 高阶函数
 
 1. 定义：操作函数的函数，接收一个或者多个函数作为参数
 2. 示例：
 
 
-```
+```javascript
 var Moqi = function(p1){
     this.add = function (p2){
         return p1 + ' ' + p2;
@@ -313,7 +313,7 @@ var Moqi = function(p1){
 };
 
 console.log(Moqi('Hello')('World'));
-```
+```javascript
 
 #### 14. 不完全函数
 
@@ -322,7 +322,7 @@ console.log(Moqi('Hello')('World'));
 >我们说它把函数 "绑定至" 对象并传入一部分参数。bind()方法只是将实参放在（完整实参列表的）左侧，也就是说传入bind()的实参都是放在传入原始函数的实参列表开始的位置，但有时我们期望将传入bind()的实参放在（完整实参列表的）右侧：
 
 
-```
+```javascript
  //实现一个工具函数将类数组对象（或对象）转换为真正的数组
 
     //在后面的示例代码中用到了这个方法将arguments对象转换为真正的数组
@@ -406,7 +406,7 @@ console.log(Moqi('Hello')('World'));
       partialRight(f,2)(3,4) //=>6:绑定最后一个实参：3*(4 -2)
 
       partial(f,undefined,2)(3,4) //=>-6:绑定中间的实参：3*(2-4)
-```
+```javascript
    
 
 2. 利用已有的函数来定义新的函数
@@ -414,7 +414,7 @@ console.log(Moqi('Hello')('World'));
 >利用这种不完全函数的编程技巧，可以编写一些有意思的代码，利用已有的函数来定义新的函数：
 
 
-```
+```javascript
 var increment = partialLeft(sum,1);
 
    var cuberoot = partialRight(Math.pow,1/3);
@@ -423,10 +423,10 @@ var increment = partialLeft(sum,1);
 
    String.prototype.last = partial(String.prototype.substr,-1,1);
    
-```
+```javascript
 
 >当将不完全调用和其他高阶函数整合在一起的时候，事情就变得格外有趣了。比如，这里的例子定义了not()函数，它用到了刚才提到的不完全调用：
-```
+```javascript
    var not = partialLeft(compose,function(x){ return !x;});
 
    var even = function(x){ return x%2 ==0; };
@@ -434,13 +434,13 @@ var increment = partialLeft(sum,1);
    var odd = not(even);
 
    var isNumber = not(isNaN);
-```
+```javascript
 
 
 >我们也可以使用不完全调用的组合来重新组织平均数和标准差的代码，这种编程风格是非常纯粹的函数式编程：
 
 
-```
+```javascript
      var data = [1,1,3,5,5]; //我们要处理的数据
 
      var sum = function(x,y){ return x+y; };  //两个初等函数
@@ -460,7 +460,7 @@ var increment = partialLeft(sum,1);
       var mean =product(reduce(data,sum),reciprocal(data.length));
 
       var stddev = sqrt(product(reduce(map(data,compose(squaer,partial(sum,neg(mean)))),sum),reciprocal(sum(data.length,-1))));
-```
+```javascript
 
 #### 15. 记忆
 
@@ -468,7 +468,7 @@ var increment = partialLeft(sum,1);
 2. 示例：
 
 
-```
+```javascript
 function add(a, b) {
   return a + b;
 }
@@ -479,6 +479,6 @@ var memoizedAdd = memorize(add);
 memoizedAdd(1, 2) // 3
 memoizedAdd(1, 2) // 相同的参数，第二次调用时，从缓存中取出数据，而非重新计算一次
 
-```
+```javascript
 
 >tips：函数记忆只是一种编程技巧，本质上是牺牲算法的空间复杂度以换取更优的时间复杂度，在客户端 JavaScript 中代码的执行时间复杂度往往成为瓶颈，因此在大多数场景下，这种牺牲空间换取时间的做法以提升程序执行效率的做法是非常可取的。
