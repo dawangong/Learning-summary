@@ -353,7 +353,8 @@ valueOf()	|返回 Date 对象的原始值。
 2. 例子：如下
 
 
-```
+```javascript
+
 var s='hello';
 s.toUppercase();
 s => 'hello' 值没变
@@ -364,7 +365,7 @@ s => 'hello' 值没变
 2. 隐式转换：如下
 
 
-```
+```javascript
 1.      2+'5'='25';
 2.      '5'-2=3;
 ```
@@ -378,7 +379,7 @@ s => 'hello' 值没变
 1. javascript程序使用var（es6之前）来声明变量，同时存入一个初始值undefined。
 2.javascript的重复声明是合法无害的，相当于再次赋值。如果遗忘声明，程序会报错。
 
-```
+```javascript
 var i;      //undefined
 var i=3;    //3
 ```
@@ -403,7 +404,7 @@ var i=3;    //3
 3. 示例如下：
     
 情况1：
-```
+```javascript
 var a=2;
 function b () {
     var a=3;
@@ -413,7 +414,7 @@ function b () {
 
 ```
 情况2:
-```
+```javascript
 var a=2;
 function b () {
     alert(a);   //2
