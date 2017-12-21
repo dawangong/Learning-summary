@@ -6,14 +6,14 @@
 ```javascript
 var pattern=/s$/;
 
-```javascript
+```
 >等价于下面的
 
 
-```javascript
+```
 var pattern=new RegExp("s$");
 
-```javascript
+```
 #### 2. 正则的一些字符
 
 >修饰符
@@ -52,14 +52,14 @@ var pattern=new RegExp("s$");
 var pattern=/[a-zA-Z0-9]/
 
 //匹配大小写字母和数字
-```javascript
+```
 
 
-```javascript
+```
 var pattern=/[^a-zA-Z0-9]/
 
 //匹配除了括号里面字符之外的字符
-```javascript
+```
 
 #### 4. 重复字符示例
 
@@ -67,7 +67,7 @@ var pattern=/[^a-zA-Z0-9]/
 ```javascript
 /\d{2,4}/       //匹配2-4个数字
 /[^(]*/         //匹配一个或多个非左括号的字符
-```javascript
+```
 
 #### 5. 非贪婪重复
 1. 用法：在待匹配字符后面跟随一个问号。
@@ -85,13 +85,13 @@ let pattern=/a|ab/g;
 let str='ab';
 let result=pattern.test(str);
 console.log(result);            //true
-```javascript
+```
 >“|”符号可以用来做选择“或”，“()”可以作为分组
 
 
-```javascript
+```
 let pattern=/[a-z]+(\d+)/g;
-```javascript
+```
 
 #### 7. 指定位置匹配
 
@@ -108,7 +108,7 @@ let pattern=/[a-z]+(\d+)/g;
 
 ```javascript
 "JavaScript".search(/script/i)      //4
-```javascript
+```
 2. replace()方法
     - 参数：第一个正则表达式，第二个期待替换为的字符串
     - 作用：执行检索和替换功能
