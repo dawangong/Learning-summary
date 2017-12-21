@@ -237,7 +237,7 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
 >CSS动画
 
 脚本化的css最常见的用途之一就是产生视觉动画，使用setTimeout()或setTinterval()(12章1节)，重复调用修改的元素的内联样式达到目的。下面的例子用shake()和fadeOut()来举例说明。shake()将元素从一边快速移动到令一边震动。例如当输入无效数据时，会吸引用户注意力。fadeOut()通过制定时间（默认500毫秒）降低元素不透明度，使得元素淡出和消失。
-
+```javascript
              //将e转化为相对定位的元素，使之左右“震动”
              //第一个参数可以是圆度对象或者元素的id
              //如果第二个参数是函数，以e为参数，将在动画结束时调用
@@ -307,6 +307,8 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
                         }
                     }
                 }
+```
+
 >shake()和fadeOut()都能接受可选的回调函数做为第二个参数，如果指定了，当动画结束时将被调用。该动画元素将作为回调函数的参数传递进去。下面的代码创建了一个按钮，单击时，作用震动并弹出。
 
 ```javascript
@@ -318,9 +320,8 @@ HTML元素的style属性是它的内联样式，它覆盖在样式表中的任�
  >为了避免使用任何脚本，CSS3的过渡函数模块定义了再样式表中指定动画效果的方式。例如，替代了类似fadeOut()这样的函数，可以使用如下的css:
 
 ```javascript
-.fadeable{transition:opacity .5s ease-in}
+.fadeable{transition:opacity 5s ease-in}
 ```
-
     
 #### 4. 脚本化CSS类
 
@@ -352,7 +353,7 @@ HTML5为了解决这个问题，为每个元素定义了classList属性。该属
 >不是所有的浏览器都支持classList属性。但是这个重要的功能容易近似实现。如下代码或使用类似的代码，把class属性当做一个类名的集合。是的需要校本化的css类工作更加简单。
 
  
-
+```javascript
              /***classList()：将className当做一个CSS类集合***/
             /**
              *如果e有classList属性则返回它。否则，模拟一个为e模型DOMTokenList API对象
@@ -418,6 +419,8 @@ HTML5为了解决这个问题，为每个元素定义了classList属性。该属
             CSSClassList.prototype.toArray = function() {
                 return this.e.className.match(/\b\w+\b/g)  [];
             };
+```
+
 #### 5. 校本化样式表
 
 >到目前为止，我们已经看到如何设置和查询CSS样式和单个元素的类名。校本化样式表当然是也是可能的。虽然不经常这么做，但偶尔缺非常有用。本节概述改技术。
@@ -432,6 +435,7 @@ HTML5为了解决这个问题，为每个元素定义了classList属性。该属
 
 >以下disableStyleSheet()函数就说明了这一点。如果传递一个数字 。函数将其当做document.styleSheet数组中的一个索引，如果传递一个字符串。函数就将其当做CSS选择器并传递给document.querySeleCtorAll()，然后设置所有返回元素的disabled属性：
 
+```javascript
             function disableStyleSheeet(ss) {
                 if (typeof ss === "number")
                     document.styleSheets[ss].disabled = true;
@@ -441,6 +445,8 @@ HTML5为了解决这个问题，为每个元素定义了classList属性。该属
                         sheet[i].disabled = true;
                 }
             }
+```
+
 ##### 5-2. 查询、插入与删除样式表规则
 
 >除了样式表的开启和关闭以外，CSSStyleSheet对象也定义了用来查询、插入和删除样式表的规则API。IE8及更早版本实现的API和其它浏览器实现的标准API之间有一些轻微的区别。
@@ -470,6 +476,7 @@ IE不支持insertRule()和deleteRule()，但定义了大致等效的函数addRul
 
 >以下代码遍历样式表样式表的规则，举例说明了用API对样式表进行一些可以的修改：
 
+```javascript
             var ss = document.styleSheets[0]; //得到一个样式表
             var rules = ss.cssRules?cssRules:ss.rules; //得到样式表规则
             
@@ -495,10 +502,13 @@ IE不支持insertRule()和deleteRule()，但定义了大致等效的函数addRul
                     i--;//调整循环索引，因为以上的规则i+1现在即为规则i
                 }
             }
+```
+            
 ##### 5-3. 创建新的样式表
 
 最后，创建整个新样式表并将其添加到文档是中可能的。在大多数浏览器中，可以用标准的DOM技术:只要创建一个新的<style>元素，将其插入到文档的头部,然后用其innerHTML属性来设置样式表内容。但是在IE8以及更早的版本中，CSSStyleSheet对象通过非标准方法document.createStyleSheet()来创建，其样式文本用cssText属性值来指定。请看下面的例子。
 
+```javascript
              /**创建一个新的样式表**/
              //对文档添加一个样式表，用指定的样式填充它
              //style参数可能是字符组成或对象。如果它是字符串，就将它作为样式表的文本。
@@ -535,3 +545,4 @@ IE不支持insertRule()和deleteRule()，但定义了大致等效的函数addRul
                     }
                 }
             }
+```            
