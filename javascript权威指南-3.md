@@ -9,18 +9,18 @@
 1.23
 'hello'
 /pattern/
-```javascript
+```
 保留字：
 ```javascript
 true
 false
 null
 this
-```javascript
+```
 变量:
 ```javascript
 a、b
-```javascript
+```
 #### 2. 对象和数组初始化表达式
     1. 定义：实际上是一个新创建的对象和数组。它们不是原始表达式。
     2. 对象和数组初始化表达式示例
@@ -31,13 +31,13 @@ a、b
 ```javascript
 []              //空数组
 [1,2]           //拥有两个元素的数组
-```javascript
+```
 
 对象:
 ```javascript
 var p={}        //空对象
 var p={x:2,y:3} //拥有两个属性成员的对象
-```javascript
+```
 #### 3. 函数表达式
 1. 定义：函数表达式可以称为函数直接量一般如下形式。
 2. 特点：这样写函数不会提升。
@@ -47,7 +47,7 @@ var p={x:2,y:3} //拥有两个属性成员的对象
 var a=function (x) {
     return x;
 }
-```javascript
+```
 #### 4. 属性访问表达式
 1. 用法：访问一个对象的属性或者数组的值
 2. 如下示例：
@@ -59,7 +59,7 @@ var b=[1,2];
 a['x']/a.x        //访问a对象下的x属性
 b[0]              //访问b数组第一项的值
 
-```javascript
+```
 #### 5. 调用表达式
 
 
@@ -67,13 +67,13 @@ b[0]              //访问b数组第一项的值
 function add(){}
 
 add();
-```javascript
+```
 #### 6. 对象创建表达式
 
 
 ```javascript
 new Object();
-```javascript
+```
 
 #### 7. 运算符概述
 
@@ -130,7 +130,7 @@ new Object();
 
 ```javascript
 variablename=(condition)?value1:value2； 
-```javascript
+```
 
 #### 8. 运算符优先级
 
@@ -165,7 +165,7 @@ property
 必需。计算结果为字符串表达式的表达式。
 object
 必需。任意对象。
-```javascript
+```
 >当然in也可以用来测试数组属性，数组的属性指的是它的索引
 
 
@@ -174,7 +174,7 @@ object
   console.log("1" in arr); // false
   console.log("0" in arr); // true
   console.log(0 in arr);   // true
-```javascript
+```
 
 #### 12. instanceof 运算符
 1. 定义：用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
@@ -189,7 +189,7 @@ object
 要检测的对象.
 constructor
 某个构造函数
-```javascript
+```
 #### 13. typeof 运算符
     1. 定义：返回一个用于标识表达式的数据类型的字符串。
     2. 语法
@@ -197,13 +197,13 @@ constructor
 
 ```javascript
 typeof '3';
-```javascript
+```
 一些特性:
 ```javascript
 typeof     运算符把类型信息以字符串形式返回。 
 typeof     返回六种可能的值：“数字”、“字符串”、“布尔值”、“对象”、“函数”和“未定义”。
 typeof     语法中的圆括号是可选的。
-```javascript
+```
 #### 14. void 运算符
 1. 定义：禁止表达式返回值。
 2. 备注：expression 参数是任何有效的 JavaScript 表达式。void 运算符计算其表达式，并返回undefined。当应计算表达式，但又不希望脚本的其他部分看见其结果时，该运算符很有用。  
@@ -211,7 +211,7 @@ typeof     语法中的圆括号是可选的。
 
 ```javascript
 void expression 
-```javascript
+```
 #### 15. delete 运算符
     1. 定义：操作符用于删除对象的某个属性。
     2. 用法示例：
@@ -220,22 +220,22 @@ void expression
 ```javascript
 delete object.property 
 delete object['property']
-```javascript
+```
 参数：
 ```javascript
 object
 对象的名称，或计算结果为对象的表达式。
 property
 要删除的属性。
-```javascript
+```
 返回值：
 ```javascript
 对于所有情况都是true，除非属性是一个自己的不可配置属性，在这种情况下，非严格模式返回 false。
-```javascript
+```
 异常：
 ```javascript
 在严格模式下，如果是对象自身的不可配置属性，会抛出Global_objects/SyntaxError。
-```javascript
+```
 #### 16. eval 运算符
 1. 解释：eval()它是一个函数也是一个运算符。
 2. eval()它接受一个参数，如果不是字符串就直接返回，如果是字符串，它会当成javascript代码去对待。
@@ -249,7 +249,7 @@ string
 返回值
 
 执行指定代码之后的返回值。如果返回值为空，返回undefined
-```javascript
+```
 
 >tips: 避免在不必要的情况下使用eval
 
@@ -271,7 +271,7 @@ constructor
 必需。对象的构造函数。若构造函数没有参数，则可省略圆括号。
 arguments
 可选。任意传递给新对象的构造函数的参数。
-```javascript
+```
 >运算符执行下列任务：
 
 - 创建一个没有成员的对象。
@@ -291,7 +291,7 @@ expression1
 任何表达式。
 expression2
 任何表达式。
-```javascript
+```
 #### 19. Spread 运算符
 1. 定义：允许从iterable表达式（如另一个数组文本）初始化部分数组文本，或允许表达式扩展到多个参数（在函数调用中）。
 2. 用法
@@ -308,4 +308,4 @@ arg0ToN
 可选。 数组文本的一个或多个元素。
 args
 可选。 函数的一个或多个参数。
-```javascript
+```
