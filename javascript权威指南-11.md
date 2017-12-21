@@ -11,7 +11,7 @@
                    <p>Thisis a <i>simple</i> document.</p>
          </body>
 </html>
-```javascript
+```
 #### 2. 选取文档元素
 
 - 用指定的id属性
@@ -27,7 +27,7 @@
 
 ```javascript
 var section1 = document.getElementById(“section1”);
-```javascript
+```
 
 
 ##### 2-2. 通过名字选取元素
@@ -36,7 +36,7 @@ var section1 = document.getElementById(“section1”);
 
 ```javascript
 var rabiobuttons =document.getElementsByName(“favorite_color”);
-```javascript
+```
 
 >它返回一个NodeList对象，后者的行为类似一个包含若干Element对象的只读数组。
 有些元素可以作为Document属性仅通过名字来选取：（最好不用）
@@ -45,7 +45,7 @@ var rabiobuttons =document.getElementsByName(“favorite_color”);
 ```javascript
 //针对<formname=”shipping_address”>元素，得到Element对象
 Var form = document.shipping_address；
-```javascript
+```
 
 ##### 2-3. 通过标签名选取元素
 
@@ -54,7 +54,7 @@ Var form = document.shipping_address；
 
 ```javascript
 var spans =document.getElementsByTagName(“span”);
-```javascript
+```
 
  
 >选取文档中的第一个<p>元素：
@@ -62,7 +62,7 @@ var spans =document.getElementsByTagName(“span”);
 
 ```javascript
 var firstpara =document.getElementsByTagName(“p”)[0];
-```javascript
+```
 
  
 >Element类也定义了getElementsByTagName()方法，但是它只选取调用该方法的元素的后代元素。
@@ -75,7 +75,7 @@ getElementsByName()和getElementsByTagName()都返回NodeList对象，而类似d
 ```javascript
 for(var i = 0; I <document.images.length; i++)  //循环所有的图片
         document.images[i].style.display =“none”;  //……隐藏它们
-```javascript
+```
 ##### 2-4. 通过CSS类选取元素
 >getElementsByClassName()方法，基于其class属性值中的标识符来选取成组的文档元素。
 返回值是一个实时的NodeList对象，包含文档或元素所有匹配的后代节点。只需要一个参数，但是该字符串可以有多个空格隔开的标识符组成。只有当元素的class属性值包含所有指定的标识符时才匹配，但是标识符的顺序是无关紧要的。
@@ -87,7 +87,7 @@ var warnings =document.getElementsByClassName(“warning”);
 //查找以”log”命名并且有“error”和“fatal”类的元素的所有后代
 var log = document.getElementById(“log”);
 var fatal = log.getElementsByClassName(“fatalerror”);
-```javascript
+```
 ##### 2-5. 通过css选择器选取元素
 
 >CSS样式表有一种非常强大的语法，选择器，用来描述文档中的若干或多组元素。
@@ -97,13 +97,13 @@ var fatal = log.getElementsByClassName(“fatalerror”);
 #nav//id=”nav”的元素
 div//所有<div>元素
 .warning//所有在class属性值中包含了”warning”的元素
-```javascript
+```
 >更一般地，元素可以基于属性值来选取：
 
 ```javascript
 p[lang=”fr”]   //所有使用法语的段落，如：<plang=”fr”>
 *[name=”x”]   //所有包含name=”x”属性的元素
-```javascript
+```
 
 >这些基本的选择器可以组合使用：
 
@@ -111,20 +111,20 @@ p[lang=”fr”]   //所有使用法语的段落，如：<plang=”fr”>
 ```javascript
 span.fatal.error  //其class中包含“fatal”和“error”的所有<span>元素
 span[lang=”fr”].warning  //所有使用法语的且其class中包含“warning”的<span>元素
-```javascript
+```
 >选择器可以指定文档结构：
 
 ```javascript
 #log span //id=”log”元素的后代元素中的所有的<span>元素
 #log>span  //id=”log”元素的子元素中的所有<span>元素
 body>h1:first-child  //<body>的子元素中的第一个<h1>元素
-```javascript
+```
 
 >选择器可以组合起来选取多个或多组元素：
 
 ```javascript
 div,#log   //所有<div>元素，以及id=”log”的元素
-```javascript
+```
 
 >方法querySelectorAll()接受包含一个css选择器的字符串参数，返回一个表示文档中匹配选择器的所有元素的NodeList对象。
 
@@ -162,7 +162,7 @@ div,#log   //所有<div>元素，以及id=”log”的元素
 var image =document.getElementById(“myimage”);
 var imgurl = image.src;      //src属性是图片的URL
 image.id === “myimage”    // 判断要查找图片的id
-```javascript
+```
 ##### 4-2. 获取和设置非标准的html属性 
 
 >Element类型还定义了getAttribute()和setAttribute()方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
@@ -171,7 +171,7 @@ image.id === “myimage”    // 判断要查找图片的id
 var image = document.images[0];
 var width =parseInt(image.getAttribute(“WIDTH”));
 image.setAttribute(“class”,”thumbnail”);
-```javascript
+```
 
 >Element类型还定义了相关的方法，hasAttribute()和removeAttribute(),它们用来检测命名属性是否存在和完全删除属性。
 
@@ -190,7 +190,7 @@ HTML5还在Element对象上定义了dataset属性。该属性指代了一个对�
 document.body.attributes0]   //<body> 元素的第一个属性
 document.body.attributes.bgcolor  //<body>元素的bgcolor属性
 document.body.attributes[“ONLOAD”]//<body>元素的onload属性
-```javascript
+```
 #### 5. 元素的内容
 ##### 5-1. 作为HTML的元素内容
 读取Element的innerHTML属性作为字符串标记返回那个元素的内容。
@@ -206,7 +206,7 @@ var text = para.textContent; //文本是“This is a simple document.”
 para.textContent = "Hello World";  //修改段落内容
 在IE中，可以用Elemen的innerText属性来代替。
 textContent属性就是将指定元素的所有后代Text节点简单地串联在一起。
-```javascript
+```
 ##### 5-3. 作为Text节点的元素内容
 >处理元素的内容来是当做一个子节点列表，每个子节点可能有它自己的一组子节点。当考虑元素的内容时，通常感兴趣的是它的Text节点。在XML文档中，你也必须准备好处理CDATASection节点——它是Text的子类型，代表了CDATA端的内容。
 
@@ -232,7 +232,7 @@ n.parentNode.replaceChild(document.createTextNode("[REDACTED]"),n);
 
 ```javascript
 var frag = document.createDocumentFragment();
-```javascript
+```
 
 >DocumentFragment的特殊之处在于它使得一组节点被当做一个节点看待。
 
@@ -284,7 +284,7 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
 <form… onreset=”return confirm(‘Reallyerase All input and start over?’)”>
          <buttontype=”reset”>Clear and Start</button>
 </form>
-```javascript
+```
 
 ##### 8-4. 开关按钮
 
@@ -318,7 +318,7 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
          document.write(“<br>Modifiedon:”+document.lastModified);
          document.write(“<br>Accessedon:”+new Date());
 </script>
-```javascript
+```
 
 >只有在解析文档时才能使用write()方法输出HTML到当前文档中。
 
@@ -338,4 +338,4 @@ onreset事件处理程序和onsubmit是类似的。它在表单重置之前调�
 <div id = "editor" contenteditable>
 Click to edit
 </div>
-```javascript
+```
