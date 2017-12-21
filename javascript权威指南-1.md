@@ -25,7 +25,7 @@
 
 >如下
 
-```
+```javascript
 //这里是行级注释
 /*我是块级注释*/
 ```
@@ -34,7 +34,7 @@
     2. 示例
 
 
-```
+```javascript
 12                  数字
 1.2                 小数
 "hello world"       字符串文本
@@ -53,7 +53,7 @@ null                空
     4. 关键字汇总，见下。
 
 
-```
+```javascript
 break       delete      function        return      typeof  
 
 case        do          if              switch      var 
@@ -75,14 +75,14 @@ super
 8. 以下这些在普通javascript代码中是合法的，在严格模式下是保留字
 
 
-```
+```javascript
 implements  let  private   public   yield   interface   package   protected   static  
 ```
 
 9. 严格模式下对下面标识符做了严格限制，它们并不完全是保留字。但不能作为变量名、函数名或参数名
 
 
-```
+```javascript
 arguments   eval
 ```
 
@@ -110,7 +110,7 @@ encodeURIComponent | Function| NaN| ReferenceError| URIError
 比如：
 
 
-```
+```javascript
 var y=x+f
 (a+b).toString()
 ```
@@ -120,7 +120,7 @@ var y=x+f
 - 但实际上浏览器会这样解析它，如下
 
 
-```
+```javascript
 var y=x+f(a+b).toString()
 ```
 >上面的示例中，浏览器会以为f（a+b）是一个函数调用
@@ -130,7 +130,7 @@ var y=x+f(a+b).toString()
 比如
 
 
-```
+```javascript
 x
 ++
 y
@@ -138,7 +138,7 @@ y
 会解析成
 
 
-```
+```javascript
 x;
 ++y;
 ```
