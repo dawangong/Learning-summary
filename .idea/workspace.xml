@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-13.md" afterPath="$PROJECT_DIR$/javascript权威指南-13.md" />
-    </list>
+    <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +18,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>javascript</find>
+      <find>```</find>
     </findStrings>
+    <replaceStrings>
+      <replace>```css</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +40,7 @@
         <option value="$PROJECT_DIR$/javascript权威指南-11.md" />
         <option value="$PROJECT_DIR$/javascript权威指南-12.md" />
         <option value="$PROJECT_DIR$/javascript权威指南-13.md" />
+        <option value="$PROJECT_DIR$/高级web解决方案.md" />
       </list>
     </option>
   </component>
@@ -59,7 +62,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1253" />
@@ -128,15 +131,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513824466135</updated>
-      <workItem from="1513824467420" duration="1753000" />
+      <workItem from="1513824467420" duration="1873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1753000" />
+    <option name="totallyTimeSpent" value="1873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.48992577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -273,6 +276,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="104" column="6" lean-forward="true" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/高级web解决方案.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="3" />
           <folding />
         </state>
       </provider>

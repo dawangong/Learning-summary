@@ -88,14 +88,14 @@ controllers   directives   services   routes   filters
 
 >还有一点，经过实验不能用大驼峰命名指令
 
-```
+```javascript
 <div ng-app="apps">
      <!--directive:my-de -->
 </div>
 ```
 
 
-```
+```javascript
 let apps=angular.module('apps',[]);
     apps.directive('myDe',() => {
         return{
@@ -128,7 +128,7 @@ let apps=angular.module('apps',[]);
     3. ng-include用法示例：
     
 
-```
+```javascript
 <div ng-include="'header.html'">
 ```
 
@@ -156,7 +156,7 @@ let apps=angular.module('apps',[]);
 2. transclude：按要求合并，看示例：
 
 
-```
+```javascript
 template: "<div>Hello everyone!<div ng-transclude></div></div>
 //自定义指令元素内部写的内容替换到ng-transclude里面去
 ```
@@ -181,8 +181,25 @@ template: "<div>Hello everyone!<div ng-transclude></div></div>
 >在$rootScope.$on()中监听事件变化
 
 
-```
+```javascript
 $rootScope.$on('xxx事件',function(){
      your code ...
 })
 ```
+#### 12. 事件广播
+
+>一般共享的方法放在服务中通过注入使用...
+
+1. 发送消息： $scope.$emit(name, data) 或者 $scope.$broadcast(name, data);
+2. 接收消息： $scope.on(name,function(event,data){ });
+3. 区别： $emit 广播给父controller   $broadcast 广播给子controller
+4. 在$on的方法中的event事件参数，其对象的属性和方法如下：
+
+事件属性    |	目的
+--- | ---
+event.targetScope   |	发出或者传播原始事件的作用域
+event.currentScope	|目前正在处理的事件的作用域
+event.name|	事件名称
+event.stopPropagation()	|一个防止事件进一步传播(冒泡/捕获)的函数(这只适用于使用`$emit`发出的事件)
+event.preventDefault()	|这个方法实际上不会做什么事，但是会设置`defaultPrevented`为true。直到事件监听器的实现者采取行动之前它才会检查`defaultPrevented`的值。
+event.defaultPrevented	|如果调用了`preventDefault`则为true
