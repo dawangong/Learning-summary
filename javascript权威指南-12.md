@@ -50,7 +50,6 @@ font:blod italic 24px helvetica
 当浏览器厂商实现非标准CSS属性时，他们将属性名钱加一个厂商前缀。Firefox使用-moz-，Chrome使用-wibkit-,而IE则使用-ms-，他们甚至用这种方式来显示将来会标准化的属性。有个例子是border-radius属性，他们指定元素的圆角。在firefox3和safari4实验中使用了前缀。一旦标准充分成熟。Firefox4和Safari5就取消和移除了前缀。直接使用border-radius.(chrome和opera已经支持没有前缀的border-radius很长的时间了，IE9也支持了没有前缀的border-radius.但在 IE8中使用前缀也没有支持。)
 在不同的浏览器中不同名字的CSS属性一起工作，你可以能发现一个属性定义一个类的方式比较好
 
-
 ```javascript
 .radius10{
 border-radius:10px; /*征对现代浏览器*/
