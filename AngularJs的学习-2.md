@@ -65,23 +65,53 @@ var app = angular.module('myApp', []);
     3. 使用Module的service方法
     
 2. 注意点：
-1. provider
-    - 通过provider方法创建的服务一定要包含$get方法，provider注入的结果就是$get方法返回的结果，如果不包含$get方法，则程序会报错。
-    - 如果在provider中有返回值，只能返回this或者基本数据类型或者具有$get方法的对象类型
-    - 在三种创建服务的方法中，只有使用provider方法创建的服务才可以传进config函数，以用于在对象启用之前，对模块进行配置。但是在config中进行配置的只能是在$get函数之外定义的变量
-    - 注入config函数中时，参数名必须由服务名+Provider组成
-2. factory
-    - 通过factory方法创建的服务必须有返回值，即必须有return函数，它可以返回任意类型的值，包括基本数据类型或者对象类型。如果没有return函数，则会报错。
-    - factory注入的结果就是return返回的结果，可以在被注入的对象中使用注入的结果定义的各种方法
-3. service
-    - 通过service方法创建的服务，可以不用返回任何值，因为service方法本身返回一个构造器，系统会用new关键字来创建一个对象，所以我们可以在service内部使用this关键字，对service进行扩展。
-    - 如果使用具有返回值的写法，返回的值必须是一个对象，如果只返回基本类型，则实际返回的还是相当于this
+    1. provider
+        - 通过provider方法创建的服务一定要包含$get方法，provider注入的结果就是$get方法返回的结果，如果不包含$get方法，则程序会报错。
+        - 如果在provider中有返回值，只能返回this或者基本数据类型或者具有$get方法的对象类型
+        - 在三种创建服务的方法中，只有使用provider方法创建的服务才可以传进config函数，以用于在对象启用之前，对模块进行配置。但是在config中进行配置的只能是在$get函数之外定义的变量
+        - 注入config函数中时，参数名必须由服务名+Provider组成
+    2. factory
+        - 通过factory方法创建的服务必须有返回值，即必须有return函数，它可以返回任意类型的值，包括基本数据类型或者对象类型。如果没有return函数，则会报错。
+        - factory注入的结果就是return返回的结果，可以在被注入的对象中使用注入的结果定义的各种方法
+    3. service
+        - 通过service方法创建的服务，可以不用返回任何值，因为service方法本身返回一个构造器，系统会用new关键字来创建一个对象，所以我们可以在service内部使用this关键字，对service进行扩展。
+        - 如果使用具有返回值的写法，返回的值必须是一个对象，如果只返回基本类型，则实际返回的还是相当于this
     
-4. 三种方法的比较
+3. 三种方法的比较
 - 需要在config中进行全局配置的话，只能选择provider方法
 - factory和service是使用比较频繁的创建服务的方法。他们之间的唯一区别是：service方法用于注入的结果通常是new出来的对象，factory方法注入的结果通常是一系列的functions
 - provider是创建服务最为复杂的方法，除非你需要创建一个可以复用的代码段并且需要进行全局配置，才需要使用provider创建
 - 所有具有特定性目的的对象都是通过factory方法去创建
+
+4. 依赖注入的时机
+
+>当在使用以上三种方法创建服务时，它们可能也需要依赖于别的服务，此时它们的依赖注入时机是有差别的。
+
+>provider是在$get方法中进行依赖注入的，当在定义provider时依赖注入则会报错
+
+```javascript
+angular.module('providerModule', [])
+       .provider('myProvider', function () {
+        this.$get = ['$http', function ($http) {
+            return {};
+        }];
+});
+```
+
+>factory和service的依赖注入发生在定义时
+
+```javascript
+angular.module('serviceModule', [])
+     .service('myService', ['$http', function ($http) {
+}]);
+```
+
+```javascript
+angular.module('factoryModule', [])
+      .factory('myFactory', ['$http', function ($http) {
+         return {};
+}]);
+```
 
 5. AngularJS官方文档也对这几种方法做了对比，结果如下表格所示：
 
@@ -93,6 +123,4 @@ var app = angular.module('myApp', []);
 是否可以创建函数|	是|	是	|是
 是否可以创建基本数据类型|	是|	否|	是
 
-6. angular中provider们的详细分析
-
-可以参考[这篇](https://segmentfault.com/a/1190000003096933)或[这篇](http://hellobug.github.io/blog/angularjs-providers/)。
+6. angular中provider们的详细分析可以参考[这篇](https://segmentfault.com/a/1190000003096933)或[这篇](http://hellobug.github.io/blog/angularjs-providers/)。
