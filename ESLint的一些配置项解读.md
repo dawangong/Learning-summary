@@ -4,7 +4,7 @@
 
 ###### 1. 安装eslint：$ npm install eslint --save-dev
 ###### 2. 使用eslint --init生成一个配置文件
-```javascript
+```
 {
 <!--环境定义了预定义的全局变量-->
 	"env": {
