@@ -25,11 +25,11 @@ $ npm install express --save-dev
 ```javascript
 { 
   <!--项目名称-->
-  "name": "boss",
+  "name": "xxx",
   <!--项目版本-->
   "version": "1.0.0",
   <!--项目描述-->
-  "description": "运营管理系统",
+  "description": "xxx",
   <!--main字段指定了加载的入口文件，require('moduleName')就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。-->
   "main": "server.js",
   <!--scripts指定了运行脚本命令的npm命令行缩写-->
@@ -40,7 +40,7 @@ $ npm install express --save-dev
     "test-e2e": "protractor protractor.conf.js",
     "update-webdriver": "webdriver-manager update"
   },
-  "author": "数云",
+  "author": "xxx",
   <!--dependencies字段指定了项目运行所依赖的模块-->
   "dependencies": {
     "angular": "1.5.8",
