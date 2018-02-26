@@ -95,7 +95,7 @@ http://localhost:4000/news?q=强拆
 ```
 
 ###### 使用json-server生成数据
- ```
+```
 module.exports = () => {
 	const data = { users: [] };
 	// Create 1000 users
