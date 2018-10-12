@@ -4,9 +4,34 @@
     <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue的双向绑定.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vue/Vue的双向绑定.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorConfig文件相关.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/.editorConfig文件相关.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/reading-notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reading-notes.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AngularJs中的双向数据绑定.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs中的双向数据绑定.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AngularJs的学习-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AngularJs的学习-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AngularJs的学习-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AngularJs的学习-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESLint的一些配置项解读.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/ESLint的一些配置项解读.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-10.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-11.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-12.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-12.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-13.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-13.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-6.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-7.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-7.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-8.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-8.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript权威指南-9.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-9.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/其他技术/json-server的使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/工作中的学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作中.../工作中的学习.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/解读package.json.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/解读package.json.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/豪举哥语录.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作中.../豪举哥语录.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/高级web解决方案.md" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/高级web解决方案.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,7 +95,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1253" />
     <option name="height" value="813" />
@@ -80,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,7 +117,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -100,9 +125,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/NodeJs/node" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/公司..." />
+      <recent name="$PROJECT_DIR$/其他技术" />
+      <recent name="$PROJECT_DIR$/项目配置相关" />
+      <recent name="$PROJECT_DIR$/CSS" />
+      <recent name="$PROJECT_DIR$/Vue" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -131,37 +163,38 @@
       <updated>1513824466135</updated>
       <workItem from="1513824467420" duration="1873000" />
       <workItem from="1537863664618" duration="184000" />
+      <workItem from="1537863957154" duration="331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2057000" />
+    <option name="totallyTimeSpent" value="2388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.15785764" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.136716" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32769555" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32882884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964337" />
-      <window_info anchor="bottom" id="CSS-X-Fire" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22608696" />
-      <window_info anchor="bottom" id="RNConsole" />
+      <window_info anchor="bottom" id="CSS-X-Fire" order="12" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22545454" />
+      <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
+      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Quokka" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -172,14 +205,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-1.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-1.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-2.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-2.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="845">
           <caret line="355" column="11" selection-start-line="355" selection-start-column="11" selection-end-line="355" selection-end-column="11" />
@@ -195,89 +228,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-3.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-3.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="310" column="3" selection-start-line="310" selection-start-column="3" selection-end-line="310" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-4.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-4.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-5.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-5.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="228" column="3" selection-start-line="228" selection-start-column="3" selection-end-line="228" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-6.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-6.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="200" column="12" lean-forward="true" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-7.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-7.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1022">
           <caret line="483" column="60" selection-start-line="483" selection-start-column="50" selection-end-line="483" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-8.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-8.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="1081" lean-forward="true" selection-start-line="1081" selection-end-line="1081" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-9.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-9.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="108" column="13" lean-forward="true" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-10.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-11.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-11.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="339" column="6" lean-forward="true" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-12.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-12.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="104" column="6" lean-forward="true" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/高级web解决方案.md">
+    <entry file="file://$PROJECT_DIR$/CSS/高级web解决方案.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript权威指南-13.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-13.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJs中的双向数据绑定.md">
+    <entry file="file://$PROJECT_DIR$/Angular1.x/AngularJs中的双向数据绑定.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="24">
@@ -287,13 +315,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue的双向绑定.md">
+    <entry file="file://$PROJECT_DIR$/JavaScript/javascript权威指南-10.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1185" />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <first_editor relative-caret-position="288">
+            <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/Vue的双向绑定.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-390">
+            <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/项目配置/.editorConfig文件相关.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/项目配置/解读package.json.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1217">
+            <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
