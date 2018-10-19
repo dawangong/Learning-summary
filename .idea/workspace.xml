@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue/Vue的双向绑定.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorConfig文件相关.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/.editorConfig文件相关.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reading-notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reading-notes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AngularJs中的双向数据绑定.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs中的双向数据绑定.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AngularJs的学习-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AngularJs的学习-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AngularJs的学习-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AngularJs的学习-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/Angular1.x/AngularJs的学习-4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESLint的一些配置项解读.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/ESLint的一些配置项解读.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-10.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-10.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-11.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-11.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-12.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-12.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-13.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-13.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-6.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-7.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-7.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-8.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-8.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript权威指南-9.md" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/javascript权威指南-9.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json-server的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/其他技术/json-server的使用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作中的学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作中.../工作中的学习.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/解读package.json.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目配置/解读package.json.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/豪举哥语录.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作中.../豪举哥语录.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/高级web解决方案.md" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/高级web解决方案.md" afterDir="false" />
-    </list>
+    <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -56,6 +25,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -95,7 +65,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1253" />
     <option name="height" value="813" />
@@ -113,6 +83,11 @@
               <item name="reading-notes" type="b2602c69:ProjectViewProjectNode" />
               <item name="reading-notes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="reading-notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reading-notes" type="462c0819:PsiDirectoryNode" />
+              <item name="其他技术" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -128,15 +103,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/其他技术" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/公司..." />
       <recent name="$PROJECT_DIR$/其他技术" />
       <recent name="$PROJECT_DIR$/项目配置相关" />
       <recent name="$PROJECT_DIR$/CSS" />
       <recent name="$PROJECT_DIR$/Vue" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -164,11 +140,12 @@
       <workItem from="1513824467420" duration="1873000" />
       <workItem from="1537863664618" duration="184000" />
       <workItem from="1537863957154" duration="331000" />
+      <workItem from="1539323644185" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2388000" />
+    <option name="totallyTimeSpent" value="2499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -185,18 +162,43 @@
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
-      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Quokka" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="运行" order="10" />
+      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="找到" order="14" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Quokka" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.136716" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24964337" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
+      <window_info anchor="bottom" id="RNConsole" order="15" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="CSS-X-Fire" order="16" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22545454" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32769555" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32882884" />
+      <window_info anchor="bottom" id="运行" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -360,6 +362,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/其他技术/SSH.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
