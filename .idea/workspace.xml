@@ -103,16 +103,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/其他技术" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/公司..." />
       <recent name="$PROJECT_DIR$/其他技术" />
       <recent name="$PROJECT_DIR$/项目配置相关" />
       <recent name="$PROJECT_DIR$/CSS" />
       <recent name="$PROJECT_DIR$/Vue" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/其他技术" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -141,11 +141,12 @@
       <workItem from="1537863664618" duration="184000" />
       <workItem from="1537863957154" duration="331000" />
       <workItem from="1539323644185" duration="111000" />
+      <workItem from="1539938685096" duration="56000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2499000" />
+    <option name="totallyTimeSpent" value="2555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -158,45 +159,45 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32882884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964337" />
       <window_info anchor="bottom" id="CSS-X-Fire" order="12" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22545454" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22545454" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
+      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Quokka" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="找到" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Quokka" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="运行" order="12" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.136716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964337" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32882884" />
       <window_info anchor="bottom" id="RNConsole" order="15" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="CSS-X-Fire" order="16" />
       <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22545454" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32769555" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32882884" />
-      <window_info anchor="bottom" id="运行" order="12" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
     </layout-to-restore>
   </component>
@@ -368,7 +369,9 @@
     <entry file="file://$PROJECT_DIR$/其他技术/SSH.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="144">
+            <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
