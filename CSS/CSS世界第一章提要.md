@@ -29,7 +29,7 @@
          - grid：块级网格
          - inline-grid：内联网格
          - subgrid：如果你的网格容器本身是另一个网格的网格项（即嵌套网格），你可以使用这个属性来表示。这个属性指明这个容器内部的**网格项**的行列尺寸直接**继承**其父级的**网格容器**属性。
-       - grid-template-row：行划分规则  => 单位：px 、%、 fr
+       - grid-template-rows：行划分规则  => 单位：px 、%、 fr
        - grid-template-columns：列划分规则 => 单位：px 、%、 fr
          - repeat()
          - fr: 等分剩余可用空间
