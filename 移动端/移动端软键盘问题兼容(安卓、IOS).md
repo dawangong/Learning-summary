@@ -13,10 +13,10 @@
             window.onresize = function () {
 
                 if (document.body.scrollHeight < h) {
-                    element[0].style.opacity = 0;
+                    element[0].style.display = none;
                     h = document.body.scrollHeight;
                 }else{
-                    element[0].style.opacity = 1;
+                    element[0].style.display = blok;
                     h = document.body.scrollHeight;
                 }
             }
