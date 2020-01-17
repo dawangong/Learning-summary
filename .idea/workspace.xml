@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd4a7ba-002b-467e-8821-c0c7b56b17aa" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript/关于修正js浮点数计算误差.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript/正则判断g模式下异常.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-11.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-12.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-5.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-6.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-8.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-9.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/设计模式/前端中的观察者模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-10.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-11.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-12.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-12.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-13.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-13.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-6.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-7.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-7.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-8.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-8.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/javascript权威指南-9.md" beforeDir="false" afterPath="$PROJECT_DIR$/权威指南/javascript权威指南-9.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/前端中的观察者模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/设计模式/前端中的观察者模式.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,7 +94,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1253" />
     <option name="height" value="813" />
@@ -89,6 +115,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="NBKnowledgePane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -101,17 +128,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/权威指南" />
+      <recent name="$PROJECT_DIR$/设计模式" />
+      <recent name="$PROJECT_DIR$/JavaScript" />
+      <recent name="$PROJECT_DIR$/其他技术" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/公司..." />
       <recent name="$PROJECT_DIR$/其他技术" />
       <recent name="$PROJECT_DIR$/项目配置相关" />
       <recent name="$PROJECT_DIR$/CSS" />
       <recent name="$PROJECT_DIR$/Vue" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/JavaScript" />
-      <recent name="$PROJECT_DIR$/其他技术" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,7 +156,8 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -143,37 +173,40 @@
       <workItem from="1539938685096" duration="56000" />
       <workItem from="1542781802203" duration="53000" />
       <workItem from="1550818373841" duration="245000" />
+      <workItem from="1579228907422" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2853000" />
+    <option name="totallyTimeSpent" value="2978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1253" height="813" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.1590909" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Weex Documents" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32769555" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32882884" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22424242" />
+      <window_info anchor="bottom" id="RNConsole" order="12" />
+      <window_info anchor="right" id="Jenkins" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48992577" visible="true" weight="0.15902579" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964337" />
       <window_info anchor="bottom" id="CSS-X-Fire" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22486034" />
-      <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
-      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Quokka" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="运行" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="运行" order="10" />
+      <window_info anchor="bottom" id="调试" order="7" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
@@ -189,8 +222,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="RNConsole" order="15" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="CSS-X-Fire" order="16" />
       <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22545454" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32769555" />
@@ -198,7 +231,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.51007426" side_tool="true" weight="0.15833333" />
     </layout-to-restore>
   </component>
@@ -410,6 +443,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/关于修正js浮点数计算误差.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/设计模式/前端中的观察者模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/权威指南/javascript权威指南-1.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
