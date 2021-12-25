@@ -113,35 +113,35 @@
      	font-size: 10vw
      }
      ```
-   
+
    - 设定变量: **(同上)**
-   
-- 设置scss: 
-  
-  ```scss
+
+   - 设置scss: 
+
+     ```scss
      // $el_desing / $client_design = $el / $client;
-  // $el = $el_desing / $client_design * $client;
-     
-  // 1rem = 10vw;
+     // $el = $el_desing / $client_design * $client;
+        
+     // 1rem = 10vw;
      // $el = $el_desing / 375px * 10rem;
-  
+     
      @function rem($pixels) {
-       @return ($pixels / 375) * 10rem;
+     @return ($pixels / 375) * 10rem;
      }
      
      // 不设置html font-size 直接用vw换算:
      // $el = $el_desing / $client_design * $client;
      @function vw($pixels) {
-       @return ($pixels / 375) * 100vw;
+     @return ($pixels / 375) * 100vw;
      }
-  ```
-  
+     ```
+
    - 区分pc端和电脑端: **(同上)**
-  
+
    - 使用示例: **(同上)**
-  
+
    - 优缺点: 
-  
+
      | 优点                              | 缺点       |
      | --------------------------------- | ---------- |
      | 使用vw 进行屏幕等比适配, 不需要js | 兼容性略差 |
