@@ -6,11 +6,13 @@
    - 设备独立像素: 设备独立像素(也叫密度无关像素)，可以认为是计算机坐标系统中得一个点，这个点代表一个可以由程序使用的虚拟像素 **(前端中可理解为 => css像素)**。
    - 设备像素比(dpr): 设备像素比 = 物理像素 / css像素, 例如 iphone6 dpr: 2。
 
-2. rem布局:  **(以iphone6为例： 设备宽高为375×667)**
+2. rem布局:  **(以iphone6为例： 设备宽高为375×667)**;
 
    - 设计稿使用的是物理像素 **(假设使用x1设计稿)**;
 
    - 资源图片使用2x图  **(iphone6 dpr: 2. 保证清晰可用x3, 保证性能可判断dpr 选择性加载)** ;
+
+   - js获取dpr
 
      ```javascript
      const dpr = window.devicePixelRatio || 1;
@@ -22,7 +24,7 @@
      const clientWidth = document.documentElement.clientWidth
      ```
 
-   - js获取dpr,设置meta:
+   - js设置meta:
 
      ```javascript
      // 进行缩放 按照物理像素显示;
@@ -36,14 +38,33 @@
    - js设置html元素的font-size:
 
      ```javascript
-     // 默认font-size 100px 为了计算方便 (设计稿375)
-     const fontSize = 1rem = 100px;
-     // 等比计算
-     const scale = 375 / 100 = 3.75;
-     // 设置 font-size
-     document.getElementsByTagName('html')[0].style.fontSize = clientWidth / 3.75;
+     // 浏览器支持的最小字体是11px 这里取屏幕宽度的十分之一 防止算出的字体小于11px 导致html font-size 设置失败.
+     document.getElementsByTagName('html')[0].style.fontSize = clientWidth / 10;
      ```
 
+   - 设定变量
+
+     ```scss
+     // $el_desing: 设计稿中元素的宽度
+     // $client_design: 设计稿中设备的屏幕宽度	375px为例
+     // $el: 真实设备的元素宽度
+     // $client: 真实设备的屏幕宽度
+     ```
+     
+   - 设置scss:
+
+     ```scss
+     // $el_desing / $client_design = $el / $client;
+     // $el = $el_desing / $client_design * $client;
+     
+     // 1rem = 1 / 10 * $client;
+     // $el = $el_desing / 375px * 10rem;
+     
+     @function rem($pixels) {
+       @return ($pixels / 375) * 10rem;
+     }
+     ```
+     
    - 区分pc端和电脑端: **(如果是两套代码 这步省略)**
 
      ```scss
@@ -60,15 +81,6 @@
            @content;
          }
        }
-     }
-     ```
-
-   - 设置scss:
-
-     ```scss
-     // px换算rem
-     @function rem($pixels) {
-       @return ($pixels / 100) * 1rem;
      }
      ```
 
@@ -96,25 +108,43 @@
    - 设置html元素的font-size:
 
      ```scss
-     // 默认font-size 100px 为了计算方便 (设计稿375)
-     // 1rem = 100px
-     // scale = 375px / 100vw(屏幕宽度)
-     // 100vw / scale = 26.666vw
+     // 浏览器支持的最小字体是11px 这里取屏幕宽度的十分之一 防止算出的字体小于11px 导致html font-size 设置失败.
      html {
-     	font-size: 26.666vw
+     	font-size: 10vw
      }
      ```
-
+   
+   - 设定变量: **(同上)**
+   
+- 设置scss: 
+  
+  ```scss
+     // $el_desing / $client_design = $el / $client;
+  // $el = $el_desing / $client_design * $client;
+     
+  // 1rem = 10vw;
+     // $el = $el_desing / 375px * 10rem;
+  
+     @function rem($pixels) {
+       @return ($pixels / 375) * 10rem;
+     }
+     
+     // 不设置html font-size 直接用vw换算:
+     // $el = $el_desing / $client_design * $client;
+     @function vw($pixels) {
+       @return ($pixels / 375) * 100vw;
+     }
+  ```
+  
    - 区分pc端和电脑端: **(同上)**
-
-   - 设置scss: **(同上)**
-
+  
    - 使用示例: **(同上)**
-
+  
    - 优缺点: 
-
+  
      | 优点                              | 缺点       |
      | --------------------------------- | ---------- |
      | 使用vw 进行屏幕等比适配, 不需要js | 兼容性略差 |
      | 可解决图片高清, border: 1px问题   |            |
      | 前置知识少, 门槛低                |            |
+
